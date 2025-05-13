@@ -1,0 +1,142 @@
+.carouselSection {
+    width: 100%;
+    color: #fff;
+    padding: 0 10rem;
+
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    transition: all 0.3s;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carouselTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f5b921;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+
+.carouselWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.arrow {
+    color: #f5b921;
+    background-color: rgba(97, 92, 92, 0.066);
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.arrow:hover {
+    color: #ffd54f;
+    background-color: rgba(97, 92, 92, 0.277);
+}
+
+
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+
+    border-color: black solid 1px;
+}
+
+@media (min-width: 1024px) {
+    .slide {
+        flex-direction: row;
+    }
+}
+
+.slideText {
+    margin-left:
+        0;
+
+    min-width: 600px;
+}
+
+.slideText h3 {
+    font-size: 2rem;
+    color: #f5b921;
+    margin-bottom: 0.75rem;
+}
+
+.slideText p {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.slideImg {
+    width: 100%;
+    min-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.dot,
+.dotActive {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dot {
+    background: #555;
+}
+
+.dotActive {
+    background: #f5b921;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0 1rem;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideActive {
+    display: flex;
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .slide {
+        flex-direction: row;
+    }
+}

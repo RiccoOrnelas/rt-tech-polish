@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -5,7 +10,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
@@ -39,4 +44,16 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.main {
+  min-height: 80dvh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  /* Adiciona barra de rolagem horizontal se necessário */
+
 }

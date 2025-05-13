@@ -1,0 +1,132 @@
+.header {
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between center;
+    border-bottom: 2px solid darkgrey;
+    height: 50px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5rem 0;
+
+}
+
+.brand h2 {
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-family: "Stick No Bills", sans-serif;
+    font-weight: 800;
+    color: #F2C12E;
+    margin-left: 15px;
+}
+
+.brand h2:hover {
+    color: yellow;
+    transition: 1s;
+}
+
+
+
+.bar {
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    margin: 3px 0;
+    border-radius: 4px;
+}
+
+.navbar_toggle {
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Restante do CSS original convertido */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.525);
+    z-index: 999;
+}
+
+.navbar_items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 35%;
+    background-color: rgba(20, 20, 20, 0.9);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    padding: 20px;
+}
+
+.navbar_items.active {
+    transform: translateX(0);
+}
+
+/* Media Queries mantidas */
+@media (max-width: 780px) {
+    .brand h2 {
+        font-size: 25px;
+    }
+}
+
+/* NOVO ESTILO PARA O HEADER SEMELHANTE À IMAGEM */
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-top: 30px;
+    height: 80px;
+}
+
+.car {
+    height: 100px;
+}
+
+.slogan {
+    flex: 1;
+    color: white;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    width: 30dvw;
+    padding: 0 1rem;
+}
+
+
+
+.links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+}
+
+.links li a {
+    color: #f5b921;
+    border-top: 1px solid #f5b921;
+    border-bottom: 1px solid #f5b921;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+
+    transition: border-bottom 0.3s ease;
+}
+
+.links li a:hover {
+    border-bottom: 2px solid #f5b921;
+}

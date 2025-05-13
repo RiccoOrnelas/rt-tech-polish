@@ -1,0 +1,40 @@
+.contatContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: auto;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    background-color: #000;
+}
+
+.title {
+    color: yellow;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.socialmedia {
+    gap: 5px;
+    justify-content: space-between 2px;
+
+}
+
+.iconeWrapper {
+    cursor: pointer;
+    display: inline-flex;
+    /* Para alinhar corretamente se houver texto ao lado */
+}
+
+.iconeWrapper :global(svg) {
+    /* Para atingir o SVG dentro do wrapper */
+    transition: transform 0.2s ease-in-out;
+}
+
+.iconeWrapper:hover :global(svg) {
+    transform: scale(1.1);
+}
