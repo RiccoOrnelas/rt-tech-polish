@@ -1,0 +1,404 @@
+.title {
+    color: #f7a800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.divider {
+    width: 90%;
+    height: 1px;
+    background-color: #333;
+    margin: 1.5rem auto 0;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    padding: 0;
+}
+
+.contactInfo {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 0.2rem;
+}
+
+.infoItem h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.infoItem p {
+    margin: 0;
+    color: #555;
+}
+
+.socialMedia h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIcon {
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+}
+
+.socialIcon:hover {
+    color: #f7a800;
+}
+
+.whatsappButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #128C7E;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1rem;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.whatsappButton:hover {
+    background-color: #075E54;
+}
+
+.whatsappIcon {
+    font-size: 1.2rem;
+}
+
+.formContainer {
+    flex: 1.5;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.formTitle {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formRow {
+    display: flex;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.formGroup label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submitButton {
+    background-color: #f7a800;
+    color: #000;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submitButton:hover {
+    background-color: #e59a00;
+}
+
+.footer {
+    background-color: #000;
+    color: #888;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para Tablets (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .contactInfo {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .formContainer {
+        padding: 1.5rem;
+    }
+
+    .formTitle {
+        font-size: 1.3rem;
+    }
+
+    .form {
+        gap: 1.2rem;
+    }
+
+    .socialIcons {
+        flex-wrap: wrap;
+    }
+}
+
+/* Responsividade para Tablets Menores e Smartphones Grandes (481px - 768px) */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .header {
+        padding: 1.5rem 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    .contactInfo {
+        padding: 1.5rem;
+        gap: 1.5rem;
+        order: 2;
+    }
+
+    .formContainer {
+        padding: 1.5rem;
+        order: 1;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .formTitle {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .infoItem {
+        gap: 0.8rem;
+    }
+
+    .infoItem h3 {
+        font-size: 1.1rem;
+    }
+
+    .socialIcons {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .whatsappButton {
+        padding: 1rem 1.5rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .submitButton {
+        padding: 1.2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsividade para Smartphones (até 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 1rem 0.8rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+        line-height: 1.4;
+    }
+
+    .contactInfo {
+        padding: 1rem;
+        gap: 1.2rem;
+    }
+
+    .formContainer {
+        padding: 1rem;
+    }
+
+    .formTitle {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .form {
+        gap: 1rem;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        padding: 0.9rem;
+        font-size: 16px;
+        /* Evita zoom no iOS */
+    }
+
+    .formGroup textarea {
+        min-height: 80px;
+    }
+
+    .infoItem {
+        gap: 0.7rem;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .icon {
+        font-size: 1.3rem;
+        margin-top: 0.1rem;
+        flex-shrink: 0;
+    }
+
+    .infoItem h3 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .infoItem p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .socialIcons {
+        gap: 0.8rem;
+        justify-content: flex-start;
+    }
+
+    .socialIcon {
+        font-size: 1.3rem;
+    }
+
+    .whatsappButton {
+        padding: 0.9rem 1.2rem;
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: none;
+    }
+
+    .whatsappIcon {
+        font-size: 1.1rem;
+    }
+
+    .submitButton {
+        padding: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .divider {
+        width: 95%;
+        margin: 1rem auto 0;
+    }
+}
+
+/* Responsividade para Smartphones Muito Pequenos (até 360px) */
+@media (max-width: 360px) {
+    .title {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+    }
+
+    .contactInfo,
+    .formContainer {
+        padding: 0.8rem;
+    }
+
+    .infoItem h3 {
+        font-size: 0.95rem;
+    }
+
+    .infoItem p {
+        font-size: 0.85rem;
+    }
+
+    .formGroup input,
+    .formGroup textarea {
+        padding: 0.8rem;
+    }
+
+    .socialIcons {
+        gap: 0.6rem;
+    }
+}

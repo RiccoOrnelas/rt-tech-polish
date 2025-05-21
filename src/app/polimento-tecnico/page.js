@@ -1,11 +1,9 @@
-import Image from "next/image";
+
 import styles from "./page.module.css";
-import { LayoutRouter } from "next/dist/server/app-render/entry-base";
-import RootLayout from "./layout";
-import Carrousel from "./components/carrousel/page";
-import Gallery from "./components/galery/page";
-import Supliers from "./components/supliers/page";
-import Contacts from "./components/contacts/page";
+import Image from "next/image";
+import Gallery from "../components/galery/page";
+import Contacts from "../components/contacts/page";
+import Depoiments from "@/app/components/depoiments/page";
 import { Anton, Poppins, Lexend } from "next/font/google"
 import { FaPhone, FaWhatsapp } from 'react-icons/fa';
 
@@ -23,8 +21,9 @@ const lexend = Lexend({
     weight: "400"
 })
 
-export default function Home() {
 
+
+export default function PolimentoTecnico() {
     const galeryImages = [
         {
             url: "/assets/imagem1.jpg",
@@ -103,16 +102,18 @@ export default function Home() {
             alt: "Lincoln",
         }
     ]
+
     return (
 
         <div className="container">
 
             <div className={styles.topText}>
-                <span className={`${styles.marker} ${anton.className} `}>Polimento Técnico e Proteção de Pintura Para seu Carro no conforto do seu lar! </span>
+                <span className={`${styles.marker} ${anton.className}`}>Polimento Técnico a Domícilio,
+                    Espalhamos espelhos sobre rodas por SP! </span>
             </div>
 
             <section className={styles.carBenefits}>
-                <h2 className={poppins.className}>Cuidar do Carro traz benefícios</h2>
+                <h2 className={poppins.className}>Benefícios do Polimento Técnico:</h2>
                 <div className={styles.benefitsContainer}>
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
@@ -122,7 +123,7 @@ export default function Home() {
                     <div className={styles.benefit}>
                         <h3>BRILHO</h3>
                         <Image src="/assets/brilho.jpg" alt="Brilho" width={260} height={160} />
-                        <p className={lexend.className}> O Brilho do verniz do carro é potencializado, fazendo com que a pintura dele fique com mais reflexo e muito mais bonita!</p>
+                        <p className={lexend.className}>O Brilho do verniz do carro é potencializado, fazendo com que a pintura dele fique com mais reflexo e muito mais bonita!</p>
                     </div>
                     <div className={styles.benefit}>
                         <h3>PROTEÇÃO</h3>
@@ -143,35 +144,52 @@ export default function Home() {
             </section>
 
 
-            <section className={styles.services}>
-                <Carrousel></Carrousel>
-            </section>
-
             <section className={styles.gallery}>
                 <Gallery imagens={galeryImages}></Gallery>
             </section>
 
-            <section className={styles.suppliers}>
-                <h2>Fornecedores</h2>
-                <div className={styles.supllyimages}>
-                    {supllyimages.map((image, index) => (
-                        <Supliers className={styles.supllyItens}
-                            key={index}
-                            imgUrl={image.imgUrl}
-                            alt={image.alt}
-                            width={image.width}
-                            height={`42px`}
-                        ></Supliers>
+            <section className={styles.depoiments}>
+                <Depoiments></Depoiments>
+            </section >
+            <section className={styles.types}>
+                <div className={styles.polishs}>
 
-                    ))}
+                    <h1>Temos o Melhor pro seu carro!</h1>
 
+                    <div className={styles.priceContainer}>
+                        <div className={styles.polimento}>
+                            <Image src='/assets/golf.jpg' alt="Carro polido" width={300} height={400} className={styles.imagecard}></Image >
+                            <div className={styles.descriptions}>
+                                <h2 className={styles.cardTitle}>Polimento Técnico Comercial</h2>
+                                <p className={styles.cardText}> O objetivo aqui é remover riscos e marcas mais superficiais, e renovar o brilho do carro, gerando uma transformação mais objetiva.
+
+                                    Após o tratamento, aplicamos uma proteção que dura até 7 meses na Pintura. </p>
+                                <h5>Valor:</h5>
+                                <h2 className={styles.price}>
+                                    R$ 279,99 <span>á Partir</span>
+                                </h2>
+                            </div>
+                        </div>
+                        <div className={styles.polimento}>
+                            <Image src='/assets/bmw.jpg' alt="Carro polido" width={300} height={400} layout="intrinsic" className={styles.imagecard} ></Image >
+                            <div className={styles.descriptions}>
+                                <h2 className={styles.cardTitle}>Polimento Técnico Premium</h2>
+                                <p className={styles.cardText}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma renovação mais profunda na pintura!
+                                    Após o Tratamento, a pintura recebe uma proteção com durabilidade de até 12 meses. </p>
+                                <h5>Valor:</h5>
+                                <h2 className={styles.price}>
+                                    R$ 379,99 <span>á Partir</span>
+                                </h2>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
-            </section >
 
+            </section >
             <section className={styles.contats}>
                 <Contacts></Contacts>
-
             </section >
 
 
