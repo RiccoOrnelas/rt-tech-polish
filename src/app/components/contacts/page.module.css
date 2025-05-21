@@ -1,3 +1,9 @@
+.cont {
+
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 .contatContainer {
     display: flex;
     justify-content: center;
@@ -11,17 +17,26 @@
 }
 
 .title {
-    color: yellow;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #ffa500;
+    margin-bottom: 15px;
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    text-decoration: underline;
+    margin-top: 40px;
+}
+
+.subTitle {
+    text-align: right;
+    padding-right: 20px;
 }
 
 .socialmedia {
-    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
     justify-content: space-between 2px;
-
+    margin-bottom: 15px;
 }
 
 .iconeWrapper {
@@ -37,4 +52,43 @@
 
 .iconeWrapper:hover :global(svg) {
     transform: scale(1.1);
+}
+
+.botaoOrcamento {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    /* Cor verde do WhatsApp */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+
+.botaoOrcamento:hover {
+    background-color: #128C7E;
+    /* Tom mais escuro no hover */
+}
+
+.iconeWhatsapp {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.allcontats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Phone p {
+    margin-bottom: 15px;
+
 }
