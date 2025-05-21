@@ -2,7 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+
     background-color: #000000;
-    color: white;
+
+    border-top: 1px solid white;
+    color: #888;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
 }

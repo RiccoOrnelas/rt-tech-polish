@@ -1,0 +1,52 @@
+.aboutContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+}
+
+.mainTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #f5a623;
+}
+
+.aboutText {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    border-bottom: #666 solid 2px;
+}
+
+.aboutText p {
+    margin-bottom: 1.2rem;
+}
+
+.slogan {
+    font-style: italic;
+    color: #666;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f5a623;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sectionBlock {
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.sectionBlock strong {
+    display: block;
+    margin-top: 0.8rem;
+    font-weight: bold;
+}
