@@ -9,7 +9,9 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
   const modalContentRef = useRef(null);
 
   // Imagens a serem exibidas (quantidade controlada)
-  const imagensExibidas = imagens.slice(0, quantidadeExibida);
+  const imagensExibidas = Array.isArray(imagens)
+    ? imagens.slice(0, quantidadeExibida)
+    : [];
 
   // Função para carregar mais imagens
   const carregarMais = () => {
