@@ -29,16 +29,19 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
   }, []);
 
   const proximaImagem = useCallback(() => {
+    if (!Array.isArray(imagens) || imagens.length === 0) return;
     const novoIndex = (indexAtual + 1) % imagens.length;
     setIndexAtual(novoIndex);
     setImagemSelecionada(imagens[novoIndex]);
   }, [indexAtual, imagens]);
 
   const imagemAnterior = useCallback(() => {
+    if (!Array.isArray(imagens) || imagens.length === 0) return;
     const novoIndex = (indexAtual - 1 + imagens.length) % imagens.length;
     setIndexAtual(novoIndex);
     setImagemSelecionada(imagens[novoIndex]);
   }, [indexAtual, imagens]);
+
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -98,13 +101,14 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
           ))}
         </div>
 
-        {imagens.length > quantidadeExibida && (
+        {Array.isArray(imagens) && imagens.length > quantidadeExibida && (
           <div className={styles.botaoContainer}>
             <button onClick={carregarMais} className={styles.botaoVerMais}>
               Ver Mais
             </button>
           </div>
         )}
+
 
         {imagemSelecionada && (
           <div className={styles.modalOverlay} onClick={fecharModal}>
@@ -147,8 +151,10 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
               </button>
 
               <div className={styles.indicadorPosicao}>
-                {indexAtual + 1} / {imagens.length}
+                {indexAtual + 1} / {Array.isArray(imagens) ? imagens.length : 0}
               </div>
+
+
             </div>
           </div>
         )}
