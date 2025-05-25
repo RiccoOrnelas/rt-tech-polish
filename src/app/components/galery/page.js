@@ -1,6 +1,7 @@
-"use client"
-import { useState, useRef, useEffect } from 'react';
-import styles from './page.module.css';
+"use client";
+import { useState, useRef, useEffect, useCallback } from "react";
+import Image from "next/image";
+import styles from "./page.module.css";
 
 export default function GaleriaDeResultadosComModal({ imagens }) {
   const [quantidadeExibida, setQuantidadeExibida] = useState(6);
@@ -8,62 +9,54 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
   const [indexAtual, setIndexAtual] = useState(0);
   const modalContentRef = useRef(null);
 
-  // Imagens a serem exibidas (quantidade controlada)
   const imagensExibidas = Array.isArray(imagens)
     ? imagens.slice(0, quantidadeExibida)
     : [];
 
-  // Função para carregar mais imagens
   const carregarMais = () => {
-    setQuantidadeExibida(prev => prev + 6);
+    setQuantidadeExibida((prev) => prev + 6);
   };
 
-  // Abrir modal com a imagem selecionada
   const abrirModal = (imagem, index) => {
     setImagemSelecionada(imagem);
     setIndexAtual(index);
-    document.body.style.overflow = 'hidden'; // Impede rolagem do corpo quando o modal está aberto
+    document.body.style.overflow = "hidden";
   };
 
-  // Fechar modal
-  const fecharModal = () => {
+  const fecharModal = useCallback(() => {
     setImagemSelecionada(null);
-    document.body.style.overflow = ''; // Restaura rolagem do corpo
-  };
+    document.body.style.overflow = "";
+  }, []);
 
-  // Navegar para a próxima imagem
-  const proximaImagem = () => {
+  const proximaImagem = useCallback(() => {
     const novoIndex = (indexAtual + 1) % imagens.length;
     setIndexAtual(novoIndex);
     setImagemSelecionada(imagens[novoIndex]);
-  };
+  }, [indexAtual, imagens]);
 
-  // Navegar para a imagem anterior
-  const imagemAnterior = () => {
+  const imagemAnterior = useCallback(() => {
     const novoIndex = (indexAtual - 1 + imagens.length) % imagens.length;
     setIndexAtual(novoIndex);
     setImagemSelecionada(imagens[novoIndex]);
-  };
+  }, [indexAtual, imagens]);
 
-  // Handler para teclas de navegação
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!imagemSelecionada) return;
 
-      if (e.key === 'ArrowRight') {
+      if (e.key === "ArrowRight") {
         proximaImagem();
-      } else if (e.key === 'ArrowLeft') {
+      } else if (e.key === "ArrowLeft") {
         imagemAnterior();
-      } else if (e.key === 'Escape') {
+      } else if (e.key === "Escape") {
         fecharModal();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [imagemSelecionada, indexAtual]);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [imagemSelecionada, proximaImagem, imagemAnterior, fecharModal]);
 
-  // Implementação de rolagem horizontal no modal
   const handleWheel = (e) => {
     if (!modalContentRef.current) return;
 
@@ -80,14 +73,12 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
   return (
     <div className={styles.galeriaContainer}>
       <div className={styles.galeriaWrapper}>
-        {/* Título da galeria */}
         <div className={styles.tituloWrapper}>
           <div className={styles.tituloBackground}>
             <h2 className={styles.titulo}>GALERIA DE RESULTADOS</h2>
           </div>
         </div>
 
-        {/* Grid de imagens */}
         <div className={styles.imageGrid}>
           {imagensExibidas.map((imagem, index) => (
             <div
@@ -95,28 +86,26 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
               className={styles.imageCard}
               onClick={() => abrirModal(imagem, index)}
             >
-              <img
+              <Image
                 src={imagem.url}
                 alt={imagem.alt || `Resultado ${index + 1}`}
                 className={styles.imagem}
+                width={500}
+                height={500}
+                layout="responsive"
               />
             </div>
           ))}
         </div>
 
-        {/* Botão Ver Mais */}
         {imagens.length > quantidadeExibida && (
           <div className={styles.botaoContainer}>
-            <button
-              onClick={carregarMais}
-              className={styles.botaoVerMais}
-            >
+            <button onClick={carregarMais} className={styles.botaoVerMais}>
               Ver Mais
             </button>
           </div>
         )}
 
-        {/* Modal para visualização ampliada com navegação */}
         {imagemSelecionada && (
           <div className={styles.modalOverlay} onClick={fecharModal}>
             <div
@@ -125,14 +114,10 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
               ref={modalContentRef}
               onWheel={handleWheel}
             >
-              <button
-                className={styles.botaoFechar}
-                onClick={fecharModal}
-              >
+              <button className={styles.botaoFechar} onClick={fecharModal}>
                 ✕
               </button>
 
-              {/* Botão para navegar para a imagem anterior */}
               <button
                 className={`${styles.botaoNavegacao} ${styles.anterior}`}
                 onClick={(e) => {
@@ -143,13 +128,14 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
                 ‹
               </button>
 
-              <img
+              <Image
                 src={imagemSelecionada.url}
-                alt={imagemSelecionada.alt}
+                alt={imagemSelecionada.alt || "Imagem selecionada"}
                 className={styles.imagemModal}
+                width={1000}
+                height={800}
               />
 
-              {/* Botão para navegar para a próxima imagem */}
               <button
                 className={`${styles.botaoNavegacao} ${styles.proximo}`}
                 onClick={(e) => {
@@ -160,7 +146,6 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
                 ›
               </button>
 
-              {/* Indicador de posição */}
               <div className={styles.indicadorPosicao}>
                 {indexAtual + 1} / {imagens.length}
               </div>
