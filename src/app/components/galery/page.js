@@ -2,6 +2,15 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { Anton, Poppins, Bebas_Neue, Lexend } from "next/font/google"
+import { FaPhone, FaWhatsapp } from 'react-icons/fa';
+
+
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  font_size: "100px"
+})
 
 export default function GaleriaDeResultadosComModal({ imagens }) {
   const [quantidadeExibida, setQuantidadeExibida] = useState(6);
@@ -78,7 +87,7 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
       <div className={styles.galeriaWrapper}>
         <div className={styles.tituloWrapper}>
           <div className={styles.tituloBackground}>
-            <h2 className={styles.titulo}>GALERIA DE RESULTADOS</h2>
+            <h2 className={bebas.className}>GALERIA DE RESULTADOS</h2>
           </div>
         </div>
 
