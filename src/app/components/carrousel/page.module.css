@@ -1,8 +1,7 @@
 .carouselSection {
     width: 100%;
     color: #fff;
-    padding: 0 10rem;
-
+    padding: 0 2rem;
 }
 
 .carousel {
@@ -28,6 +27,7 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    width: 100%;
 }
 
 .arrow {
@@ -41,6 +41,7 @@
     cursor: pointer;
     z-index: 10;
     transition: background 0.2s;
+    flex-shrink: 0;
 }
 
 .arrow:hover {
@@ -48,30 +49,21 @@
     background-color: rgba(97, 92, 92, 0.277);
 }
 
-
-
 .slide {
     flex-shrink: 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
     align-items: center;
-
-    border-color: black solid 1px;
-}
-
-@media (min-width: 1024px) {
-    .slide {
-        flex-direction: row;
-    }
+    padding: 1rem;
+    transition: opacity 0.5s ease-in-out;
+    box-sizing: border-box;
 }
 
 .slideText {
-    margin-left:
-        0;
-
-    min-width: 600px;
+    text-align: center;
+    width: 100%;
 }
 
 .slideText h3 {
@@ -87,7 +79,7 @@
 
 .slideImg {
     width: 100%;
-    min-width: 300px;
+    max-width: 400px;
     max-height: 300px;
     object-fit: cover;
     border-radius: 1rem;
@@ -119,24 +111,82 @@
     background: #f5b921;
 }
 
-.slide {
-    flex-shrink: 0;
-    width: 100%;
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    padding: 0 1rem;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.slideActive {
-    display: flex;
-    opacity: 1;
-}
-
+/* Tablets e telas médias */
 @media (min-width: 768px) {
+    .carouselSection {
+        padding: 0 4rem;
+    }
+
     .slide {
         flex-direction: row;
+        text-align: left;
+    }
+
+    .slideText {
+        flex: 1;
+        text-align: left;
+        min-width: 300px;
+    }
+
+    .slideImg {
+        flex: 1;
+        min-width: 300px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .carouselSection {
+        padding: 0 6rem;
+    }
+
+    .slideText {
+        min-width: 400px;
+    }
+}
+
+/* Telas grandes */
+@media (min-width: 1200px) {
+    .carouselSection {
+        padding: 0 10rem;
+    }
+
+    .slideText {
+        min-width: 600px;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 486px) {
+    .carouselSection {
+        padding: 0 1rem;
+    }
+
+    .carouselTitle {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .arrow {
+        font-size: 1.2rem;
+        padding: 0.4rem;
+    }
+
+    .slide {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .slideText h3 {
+        font-size: 1.5rem;
+    }
+
+    .slideText p {
+        font-size: 0.9rem;
+    }
+
+    .slideImg {
+        max-width: 280px;
+        max-height: 200px;
     }
 }
