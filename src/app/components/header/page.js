@@ -63,7 +63,7 @@ export default function Header() {
                 <div className={styles.topBar}>
                     <img src="/assets/logo.png" alt="RT Polimento Técnico" className={styles.logo} />
                     <h1 className={styles.slogan}>
-                        SEU CARRO FOI FEITO PARA BRILHAR E POR AQUI BRILHO É COISA SÉRIA!
+                        SEU CARRO FOI FEITO PARA BRILHAR E POR AQUI, BRILHO É COISA SÉRIA!
                     </h1>
                     <img src="/assets/car.png" alt="Carro" className={styles.car} />
                 </div>

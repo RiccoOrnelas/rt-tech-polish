@@ -233,6 +233,9 @@
     }
 }
 
+
+
+
 @media (max-width: 480px) {
     .mobileMenu {
         width: 100%;
@@ -247,15 +250,16 @@
 
 
     .logo {
-        height: 60px;
+        height: 47px;
     }
 
     .slogan {
         font-size: 0.8rem;
+        width: auto;
     }
 
     .car {
-        height: 70px;
+        height: 44px;
     }
 
     .topItens {

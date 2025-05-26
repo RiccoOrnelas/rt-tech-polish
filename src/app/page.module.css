@@ -104,9 +104,6 @@
   background-color: #000000;
   color: #fff;
   padding: 0px 20px;
-
-
-
 }
 
 .suppliers h2 {
@@ -146,4 +143,52 @@
     flex-direction: column-reverse;
     margin-left: 0;
   }
+
+  .marker {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 486px) {
+
+  .marker {
+    padding: 0%;
+    margin: 0%;
+    font-size: 22px;
+  }
+
+  .topText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin-top: 3px;
+    height: auto;
+  }
+
+  .services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carBenefits {
+    padding: 20px 5px;
+  }
+
+
+  .supllyimages {
+
+    gap: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 2px;
+
+  }
+
+  .supllyitens img {
+    width: 100px;
+    height: 18px;
+  }
+
 }

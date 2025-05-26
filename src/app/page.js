@@ -6,9 +6,14 @@ import Carrousel from "./components/carrousel/page";
 import Gallery from "./components/galery/page";
 import Supliers from "./components/supliers/page";
 import Contacts from "./components/contacts/page";
-import { Anton, Poppins, Lexend } from "next/font/google"
+import { Anton, Poppins, Bebas_Neue, Lexend } from "next/font/google"
 import { FaPhone, FaWhatsapp } from 'react-icons/fa';
 
+
+const bebas = Bebas_Neue({
+    subsets: ["latin"],
+    weight: "400"
+})
 
 const anton = Anton({
     subsets: ["latin"],
@@ -112,7 +117,7 @@ export default function Home() {
             </div>
 
             <section className={styles.carBenefits}>
-                <h2 className={poppins.className}>Cuidar do Carro traz benefícios</h2>
+                <h2 className={bebas.className}>Cuidar do Carro traz benefícios</h2>
                 <div className={styles.benefitsContainer}>
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
@@ -152,7 +157,7 @@ export default function Home() {
             </section>
 
             <section className={styles.suppliers}>
-                <h2>Fornecedores</h2>
+                <h2 className={bebas.className}>Fornecedores</h2>
                 <div className={styles.supllyimages}>
                     {supllyimages.map((image, index) => (
                         <Supliers className={styles.supllyItens}
