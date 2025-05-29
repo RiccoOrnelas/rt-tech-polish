@@ -1,9 +1,16 @@
 import styles from "./page.module.css";
+import { Bebas_Neue } from "next/font/google";
+
+const bebas = Bebas_Neue({
+    subsets: ["latin"],
+    weight: "400"
+})
 
 export default function Depoiments() {
+
     return (
         <div className={styles.container}>
-            <h2 className={styles["titulo-destaque"]}>O que dizem a nosso respeito:</h2>
+            <h2 className={`${styles.titulo} ${bebas.className}`}>O que dizem a nosso respeito:</h2>
 
             <div className={styles["depoimentos-container"]}>
                 <div className={styles.depoimento}>

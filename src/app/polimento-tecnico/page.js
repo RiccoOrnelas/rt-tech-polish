@@ -4,7 +4,7 @@ import Image from "next/image";
 import Gallery from "../components/galery/page";
 import Contacts from "../components/contacts/page";
 import Depoiments from "@/app/components/depoiments/page";
-import { Anton, Poppins, Lexend } from "next/font/google"
+import { Anton, Poppins, Lexend, Bebas_Neue } from "next/font/google"
 import { FaPhone, FaWhatsapp } from 'react-icons/fa';
 
 
@@ -12,7 +12,7 @@ const anton = Anton({
     subsets: ["latin"],
     weight: "400"
 })
-const poppins = Poppins({
+const bebas = Bebas_Neue({
     subsets: ["latin"],
     weight: "400"
 })
@@ -113,7 +113,7 @@ export default function PolimentoTecnico() {
             </div>
 
             <section className={styles.carBenefits}>
-                <h2 className={poppins.className}>Benefícios do Polimento Técnico:</h2>
+                <h2 className={bebas.className}>Benefícios do Polimento Técnico</h2>
                 <div className={styles.benefitsContainer}>
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
@@ -154,19 +154,19 @@ export default function PolimentoTecnico() {
             <section className={styles.types}>
                 <div className={styles.polishs}>
 
-                    <h1>Temos o Melhor pro seu carro!</h1>
+                    <h1>Temos o melhor pro seu carro!</h1>
 
                     <div className={styles.priceContainer}>
                         <div className={styles.polimento}>
                             <Image src='/assets/golf.jpg' alt="Carro polido" width={300} height={400} className={styles.imagecard}></Image >
                             <div className={styles.descriptions}>
                                 <h2 className={styles.cardTitle}>Polimento Técnico Comercial</h2>
-                                <p className={styles.cardText}> O objetivo aqui é remover riscos e marcas mais superficiais, e renovar o brilho do carro, gerando uma transformação mais objetiva.
+                                <p className={`${lexend.className} ${styles.cardText}`}> O objetivo aqui é remover riscos e marcas mais superficiais, e renovar o brilho do carro, gerando uma transformação mais objetiva.
 
                                     Após o tratamento, aplicamos uma proteção que dura até 7 meses na Pintura. </p>
                                 <h5>Valor:</h5>
                                 <h2 className={styles.price}>
-                                    R$ 279,99 <span>á Partir</span>
+                                    R$ <span> 279,99 <span>á partir</span></span>
                                 </h2>
                             </div>
                         </div>
@@ -174,11 +174,11 @@ export default function PolimentoTecnico() {
                             <Image src='/assets/bmw.jpg' alt="Carro polido" width={300} height={400} layout="intrinsic" className={styles.imagecard} ></Image >
                             <div className={styles.descriptions}>
                                 <h2 className={styles.cardTitle}>Polimento Técnico Premium</h2>
-                                <p className={styles.cardText}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma renovação mais profunda na pintura!
+                                <p className={`${lexend.className} ${styles.cardText}`}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma renovação mais profunda na pintura!
                                     Após o Tratamento, a pintura recebe uma proteção com durabilidade de até 12 meses. </p>
                                 <h5>Valor:</h5>
                                 <h2 className={styles.price}>
-                                    R$ 379,99 <span>á Partir</span>
+                                    R$ <span>379,99 <span>á partir</span></span>
                                 </h2>
                             </div>
                         </div>
@@ -191,9 +191,6 @@ export default function PolimentoTecnico() {
             <section className={styles.contats}>
                 <Contacts></Contacts>
             </section >
-
-
-
         </div >
     );
 }

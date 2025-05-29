@@ -4,7 +4,7 @@
     padding: 40px 20px;
 }
 
-.titulo-destaque {
+.titulo {
     background-color: #ffcc00;
     color: #000;
     font-size: 32px;
@@ -117,5 +117,17 @@
 
     .depoimento {
         max-width: 100%;
+    }
+
+    .container {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        margin-top: 0px;
+        padding-top: 0%;
     }
 }
