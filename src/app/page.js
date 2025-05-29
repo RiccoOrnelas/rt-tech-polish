@@ -121,7 +121,7 @@ export default function Home() {
                 <div className={styles.benefitsContainer}>
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
-                        <Image src="/assets/restauracao.jpg" alt="Restauração" width={260} height={160} />
+                        <Image src="/assets/Restauracao.jpg" alt="Restauração" width={260} height={160} />
                         <p className={lexend.className}>Ao realizar um Polimento Técnico na Pintura do Veículo, o carro fica livre de riscos e com aspecto de novo!</p>
                     </div>
                     <div className={styles.benefit}>
@@ -141,7 +141,7 @@ export default function Home() {
                     </div>
                     <div className={styles.benefit}>
                         <h3>PREVENÇÃO<br />DE CUSTOS</h3>
-                        <Image src="/assets/prevencao.jpg" alt="Prevenção de custos" width={260} height={160} />
+                        <Image src="/assets/Prevencao.jpg" alt="Prevenção de custos" width={260} height={160} />
                         <p className={lexend.className}>Cuidar da estética do carro previne contra futuros gastos de repintura, pois preserva o verniz do carro. Evitando também que o auto sofra desvalorização por conta da aparência ou falta de originalidade na estética.</p>
                     </div>
                 </div>

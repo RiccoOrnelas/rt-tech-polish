@@ -24,10 +24,14 @@
 }
 
 .titulo {
-    color: #FFD700;
-    font-size: 24px;
     font-weight: bold;
     margin: 0;
+    background-color: #ffcc00;
+    color: #000;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
 }
 
 .imageGrid {
@@ -202,18 +206,19 @@
 }
 
 .botaoVerMais {
-    background-color: #3b82f6;
-    color: white;
+    background-color: #ffdd01;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .botaoVerMais:hover {
-    background-color: #2563eb;
+    background-color: #3131316e;
 }
 
 /* Modal */
@@ -299,4 +304,34 @@
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 14px;
+}
+
+@media (max-width: 486px) {
+
+    .tituloBackground h2 {
+
+        background-color: #ffcc00;
+        color: #000;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        padding: 3px;
+    }
+
+    .imagem {
+        max-width: 140px;
+    }
+
+    .imageCard {
+        max-width: 140px;
+
+    }
+
+    .imageGrid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
 }
