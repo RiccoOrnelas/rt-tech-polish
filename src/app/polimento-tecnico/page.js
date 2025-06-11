@@ -117,7 +117,7 @@ export default function PolimentoTecnico() {
                 <div className={styles.benefitsContainer}>
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
-                        <Image src="/assets/restauracao.jpg" alt="Restauração" width={260} height={160} />
+                        <Image src="/assets/Restauracao.jpg" alt="Restauração" width={260} height={160} />
                         <p className={lexend.className}>Ao realizar um Polimento Técnico na Pintura do Veículo, o carro fica livre de riscos e com aspecto de novo!</p>
                     </div>
                     <div className={styles.benefit}>
@@ -131,13 +131,13 @@ export default function PolimentoTecnico() {
                         <p className={lexend.className}>A pintura estará protegida contra as ações do tempo que causam desgaste na pintura, e ações naturais como fezes de pássaros, seiva de árvores e etc...</p>
                     </div>
                     <div className={styles.benefit}>
-                        <h3>LIMPEZA +<br />DURADOURA</h3>
+                        <h3>LIMPEZA + <br />DURADOURA</h3>
                         <Image src="/assets/limpeza.jpg" alt="Limpeza e durabilidade" width={260} height={160} />
                         <p className={lexend.className}>Devido à pintura do carro estar mais lisa e protegida, a sujeira terá mais dificuldade de ancorar no carro, sendo assim ele ficará limpo por muito mais tempo, reduzindo a frequência de lavagem.</p>
                     </div>
                     <div className={styles.benefit}>
-                        <h3>PREVENÇÃO<br />DE CUSTOS</h3>
-                        <Image src="/assets/prevencao.jpg" alt="Prevenção de custos" width={260} height={160} />
+                        <h3>PREVENÇÃO <br />DE CUSTOS</h3>
+                        <Image src="/assets/Prevencao.jpg" alt="Prevenção de custos" width={260} height={160} />
                         <p className={lexend.className}>Cuidar da estética do carro previne contra futuros gastos de repintura, pois preserva o verniz do carro. Evitando também que o auto sofra desvalorização por conta da aparência ou falta de originalidade na estética.</p>
                     </div>
                 </div>
