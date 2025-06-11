@@ -176,6 +176,7 @@
 
 @media (max-width: 486px) {
 
+
     .marker {
         padding: 0%;
         margin: 0%;
@@ -198,15 +199,32 @@
     }
 
     .carBenefits {
-        padding: 10px 5px;
+
+
+        padding: 2px;
+        text-align: center;
+
     }
 
     .benefit {
-        width: 80%;
+        min-width: 80dvw;
+        max-width: 88%;
+    }
+
+    .benefit img {
+        max-width: 80%;
     }
 
     .benefit p {
         width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: medium;
+
+    }
+
+    .benefit h3 br {
+        display: none;
     }
 
 
@@ -263,7 +281,7 @@
         max-width: 90%;
         text-align: center;
         justify-content: center;
-        font-size: 14px;
+        font-size: 17px;
     }
 
     .polimento h5 {
@@ -298,7 +316,6 @@
 
     .descriptions h2 {
         margin-top: 10px;
-        font-size: 18px;
     }
 
 }

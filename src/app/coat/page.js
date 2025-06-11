@@ -1,18 +1,36 @@
 import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
+import { Poppins, Montserrat, Inter, Bebas_Neue } from 'next/font/google';
 
+const poppins = Poppins({
+    weight: "400",
+    subsets: ["latin"]
+})
+
+const montserrat = Montserrat({
+    weight: "400",
+    subsets: ["latin"]
+})
+const inter = Inter({
+    weight: "400",
+    subsets: ["latin"]
+})
+const bebas = Bebas_Neue({
+    weight: "400",
+    subsets: ["latin"]
+})
 export default function Vitrificacao() {
     return (
         <div className={styles.container}>
             {/* Banner Principal */}
             <div className={styles.banner}>
                 <div className={styles.overlay}>
-                    <h1 className={styles.title}>Você Sabe o que é Vitrificação?</h1>
-                    <p className={styles.description}>
+                    <h1 className={montserrat.className}>Você Sabe o que é Vitrificação?</h1>
+                    <p className={inter.className}>
                         A Vitrificação é uma Proteção de Pintura, mas diferente de uma proteção comum, como a
                         tradicional Cera de Cristalização por exemplo, a Vitrificação forma sobre a pintura do
-                        veículo uma camada rígida de proteção, como uma Película de Vidro, servindo como uma
+                        veículo uma camada rígida de proteção, como uma &quot;Película de Vidro&quot;, servindo como uma
                         camada de Sacrifício, impedindo contato de atritos e fatores externos diretamente com a
                         pintura do carro!
                     </p>
@@ -24,7 +42,6 @@ export default function Vitrificacao() {
                 <h2 className={styles.benefitsTitle}>Beneficios</h2>
                 <div className={styles.benefitsGrid}>
                     <div className={styles.benefitCard}>
-                        <div className={styles.benefitImage} style={{ backgroundImage: 'url("/images/brilho.jpg")' }}></div>
                         <div className={styles.benefitOverlay}>
                             <h3 className={styles.benefitText}>Muito + Brilho</h3>
                         </div>
@@ -33,28 +50,37 @@ export default function Vitrificacao() {
                     <div className={styles.benefitCard}>
 
                         <div className={styles.benefitOverlay}>
-                            <h3 className={styles.benefitText}>- Sujeira</h3>
+                            <h3 className={styles.benefitText}>Repele Água e Sujeira</h3>
                         </div>
                     </div>
 
                     <div className={styles.benefitCard}>
 
                         <div className={styles.benefitOverlay}>
-                            <h3 className={styles.benefitText}>+ Proteção</h3>
+                            <h3 className={styles.benefitText}>Facilita Limpeza</h3>
                         </div>
                     </div>
 
                     <div className={styles.benefitCard}>
 
                         <div className={styles.benefitOverlay}>
-                            <h3 className={styles.benefitText}>Protege o Verniz do Carro contra riscos e atritos</h3>
+                            <h3 className={styles.benefitText}>Resistência a Riscos</h3>
+                        </div>
+                    </div>
+
+
+                    <div className={styles.benefitCard}>
+
+                        <div className={styles.benefitOverlay}>
+                            <h3 className={styles.benefitText}>Proteção UV
+                            </h3>
                         </div>
                     </div>
 
                     <div className={styles.benefitCard}>
 
                         <div className={styles.benefitOverlay}>
-                            <h3 className={styles.benefitText}>Durabilidade de 3 à 5 Anos</h3>
+                            <h3 className={styles.benefitText}> 3 à 5 anos de Proteção</h3>
                         </div>
                     </div>
                 </div>
@@ -64,63 +90,48 @@ export default function Vitrificacao() {
                     <h1 className={styles.titulo}>Sobre o Procedimento</h1>
 
                     <div className={styles.content}>
+
+
                         <div className={styles.infoSection}>
-                            <h2 className={styles.subtitulo}>Sobre o Serviço</h2>
-                            <p className={styles.texto}>
-                                Será realizado um polimento técnico para a
-                                remoção de todos os riscos e contaminações
-                                na pintura do veículo, e só após a pintura
-                                zerada será aplicado o coating.
+                            <h2 className={`${styles.subtitulo} ${montserrat.className}`}>Sobre o Serviço</h2>
+                            <p className={`${styles.texto} ${poppins.className}`}>
+                                É realizada uma descontaminação e um polimento técnico para corrigir as imperfeições do verniz
+                                na pintura do veículo preparando-o, e então é aplicado o coating, para proteger e potencializar o brilho do veículo.
                             </p>
 
-                            <h2 className={styles.subtitulo}>Tempo</h2>
-                            <p className={styles.texto}>
+                            <h2 className={`${styles.subtitulo} ${montserrat.className}`}>Tempo</h2>
+                            <p className={`${styles.texto} ${poppins.className}`}>
                                 Em carros pequenos e médios o serviço é
-                                realizado em um dia, podendo ir de 6 a 10
+                                realizado de um dia á um dia e meio, podendo ir de 8 à 14
                                 horas de trabalho a depender do estado da
-                                pintura. Após o término do serviço será
-                                necessário que o carro fique 24horas sem
-                                tomar chuva para a cura total do
-                                vitrificador.
+                                pintura. Após o término do serviço há um tempo de cura do vitrificador, a depender do vitrificador escolhido.
                             </p>
 
-                            <h2 className={styles.subtituloInvestimento}>Custo do Investimento</h2>
-                            <div className={styles.precoBox}>
-                                <div className={styles.precoContainer}>
-                                    <span className={styles.preco}>R$ 799,99</span>
-                                    <span className={styles.apartir}>à partir</span>
-                                </div>
+                            <h2 className={`${styles.offer} ${bebas.className}`}>Valor do Investimento</h2>
+                            <div className={styles.priceBox}>
+                                <h2 className={`${styles.price} ${poppins.className}`}>
+                                    R$ <span>799,99 <span>á partir</span></span>
+                                </h2>
 
-                                <div className={styles.formasPagamento}>
-                                    <Image
-                                        src="/assets/formaspagamento.png"
-                                        alt="Formas de Pagamento"
-                                        width={280}
-                                        height={40}
-                                    />
-                                </div>
+
+                                <Image
+                                    src="/assets/formaspagamento.png"
+                                    alt="Formas de Pagamento"
+                                    width={280}
+                                    height={25}
+                                />
+
                             </div>
 
                             <p className={styles.textoInvestimento}>
-                                O valor a ser investido no serviço varia de
-                                acordo com o tamanho do veículo e com o
-                                nível de dureza do Vitrificador.
+                                * O valor do investimento varia conforme o tamanho do veículo e o vitrificador escolhido
                             </p>
 
                             <button className={styles.botaoOrcamento}>
-                                Solicitar um Orçamento para Vitrificação
+                                Solicitar Orçamento de Vitrificação
                             </button>
                         </div>
 
-                        <div className={styles.imagemSection}>
-                            <Image
-                                src="/assets/farol.jpg"
-                                alt="Detalhe do Farol do Carro"
-                                fill
-                                className={styles.imagem}
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                        </div>
                     </div>
                 </div>
 
