@@ -107,7 +107,44 @@ export default function Vitrificacao() {
                                 pintura. Após o término do serviço há um tempo de cura do vitrificador, a depender do vitrificador escolhido.
                             </p>
 
+
+                            <h2 className={`${styles.offer} ${bebas.className}`}>Vitrificadores</h2>
+
+
+
+                            <div className={styles.coatings}>
+                                <Image
+                                    src="/assets/maxpro.jpg"
+                                    alt="Formas de Pagamento"
+                                    width={100}
+                                    height={25}
+                                />
+
+                                <Image
+                                    src="/assets/Nasiol.png"
+                                    alt="Formas de Pagamento"
+                                    width={280}
+                                    height={25}
+                                />
+
+                                <Image
+                                    src="/assets/Vx45.png"
+                                    alt="Formas de Pagamento"
+                                    width={280}
+                                    height={25}
+                                />
+
+                                <Image
+                                    src="/assets/insignia.png"
+                                    alt="Formas de Pagamento"
+                                    width={280}
+                                    height={25}
+                                />
+
+                            </div>
+
                             <h2 className={`${styles.offer} ${bebas.className}`}>Valor do Investimento</h2>
+
                             <div className={styles.priceBox}>
                                 <h2 className={`${styles.price} ${poppins.className}`}>
                                     R$ <span>799,99 <span>á partir</span></span>
