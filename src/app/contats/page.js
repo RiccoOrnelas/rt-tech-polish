@@ -3,7 +3,29 @@ import Head from 'next/head'
 import { useState } from 'react'
 import styles from './page.module.css'
 import { FaMapMarkerAlt, FaPhone, FaFacebookF, FaInstagram, FaThumbsUp, FaWhatsapp } from 'react-icons/fa'
+import { Montserrat, Lexend, Poppins } from 'next/font/google'
 
+const montserrat = Montserrat(
+    {
+        subsets: ["latin"],
+        weight: "500"
+    }
+
+)
+const lexend = Lexend(
+    {
+        subsets: ["latin"],
+        weight: "500"
+    }
+
+)
+const poppins = Poppins(
+    {
+        subsets: ["latin"],
+        weight: "500"
+    }
+
+)
 export default function Contats() {
     const [formData, setFormData] = useState({
         nome: '',
@@ -32,15 +54,11 @@ export default function Contats() {
 
     return (
         <div className={styles.container}>
-            <Head>
-                <title>Fale Conosco - Estética Automotiva</title>
-                <meta name="description" content="Solicite um orçamento para estética do seu carro" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+
 
             <header className={styles.header}>
-                <h1 className={styles.title}>Fale Conosco</h1>
-                <p className={styles.subtitle}>
+                <h1 className={`${styles.title} ${montserrat.className}`}>Fale Conosco</h1>
+                <p className={`${styles.subtitle} ${poppins.className}`}>
                     Solicite um orçamento sem compromisso ou tire dúvidas relacionadas a Estética do seu Carro!
                 </p>
                 <div className={styles.divider}></div>
@@ -83,8 +101,8 @@ export default function Contats() {
 
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <div className={styles.formRow}>
-                            <div className={styles.formGroup}>
-                                <label htmlFor="nome">Nome</label>
+                            <div className={`${styles.formGroup} ${lexend.className}`}>
+                                <label htmlFor="nome">Nome:</label>
                                 <input
                                     type="text"
                                     id="nome"
@@ -95,8 +113,8 @@ export default function Contats() {
                                 />
                             </div>
 
-                            <div className={styles.formGroup}>
-                                <label htmlFor="celular">Celular</label>
+                            <div className={`${styles.formGroup} ${lexend.className}`}>
+                                <label htmlFor="celular">Celular:</label>
                                 <input
                                     type="tel"
                                     id="celular"
@@ -108,20 +126,8 @@ export default function Contats() {
                             </div>
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label htmlFor="email">Nome</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-
                         <div className={styles.formRow}>
-                            <div className={styles.formGroup}>
+                            <div className={`${styles.formGroup} ${lexend.className}`}>
                                 <label htmlFor="carro">Qual Seu Carro?</label>
                                 <input
                                     type="text"
@@ -133,8 +139,8 @@ export default function Contats() {
                                 />
                             </div>
 
-                            <div className={styles.formGroup}>
-                                <label htmlFor="cor">Cor do Carro</label>
+                            <div className={`${styles.formGroup} ${lexend.className}`}>
+                                <label htmlFor="cor">Cor do Carro:</label>
                                 <input
                                     type="text"
                                     id="cor"
@@ -146,7 +152,7 @@ export default function Contats() {
                             </div>
                         </div>
 
-                        <div className={styles.formGroup}>
+                        <div className={`${styles.formGroup} ${lexend.className}`}>
                             <label htmlFor="ultimoTratamento">
                                 Quando foi a última vez que seu carro recebeu um tratamento na pintura?
                             </label>
@@ -160,8 +166,8 @@ export default function Contats() {
                             />
                         </div>
 
-                        <div className={styles.formGroup}>
-                            <label htmlFor="mensagem">Mensagem</label>
+                        <div className={`${styles.formGroup} ${lexend.className}`}>
+                            <label htmlFor="mensagem">Mensagem:</label>
                             <textarea
                                 id="mensagem"
                                 name="mensagem"

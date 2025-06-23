@@ -162,6 +162,23 @@
     background-color: #000;
 }
 
+.coatings {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+
+}
+
+.coatings img {
+    width: auto;
+    height: 5cm;
+
+}
+
 .offer {
     font-size: 1.5rem;
     color: #ffa500;
@@ -318,6 +335,37 @@
 }
 
 @media (max-width: 480px) {
+    .coatings img {
+        width: auto;
+        height: 2cm;
+        border-radius: 2px;
+    }
+
+    .coatings img:nth-of-type(1) {
+        width: 3cm;
+        height: 1cm;
+        border-radius: 2px;
+    }
+
+    .coatings img:nth-of-type(2) {
+        width: 2cm;
+        height: 1cm;
+        border-radius: 2px;
+    }
+
+    .coatings img:nth-of-type(3) {
+        width: 2.5cm;
+        height: 1cm;
+        border-radius: 2px;
+    }
+
+    .coatings img:nth-of-type(4) {
+        width: 2cm;
+        height: 1cm;
+        border-radius: 2px;
+    }
+
+
     .benefitCard {
         width: 100%;
     }

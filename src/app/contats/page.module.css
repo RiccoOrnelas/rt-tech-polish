@@ -3,6 +3,7 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .subtitle {
@@ -49,16 +50,19 @@
 .infoItem h3 {
     margin: 0 0 0.5rem 0;
     font-size: 1.2rem;
+    color: #f7a800;
 }
 
 .infoItem p {
     margin: 0;
     color: #555;
+    font-weight: bold;
 }
 
 .socialMedia h3 {
     margin: 0 0 1rem 0;
     font-size: 1.2rem;
+    color: #f7a800
 }
 
 .socialIcons {
@@ -106,6 +110,8 @@
     background-color: #fff;
 }
 
+.formContainer label {}
+
 .formTitle {
     font-size: 1.5rem;
     color: #333;
@@ -132,7 +138,9 @@
 .formGroup label {
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #333;
+    color: #000000;
+    font-weight: 600;
+    font-family: sans-serif;
 }
 
 .formGroup input,
