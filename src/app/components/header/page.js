@@ -50,7 +50,7 @@ export default function Header() {
     };
 
     return (
-        <>
+        <>  <div className={styles.navcont}>
             <header className={styles.header}>
                 <div className={styles.topItens}>
                     <div className={styles.socialLinks}>
@@ -149,6 +149,7 @@ export default function Header() {
                     <span>Sobre</span>
                 </Link>
             </nav>
+        </div>
         </>
     );
 }

@@ -270,7 +270,7 @@
     }
 
     /* Adicionar padding bottom ao body para compensar a bottom nav */
-    body {
+    .navcont {
         padding-bottom: 80px;
     }
 
