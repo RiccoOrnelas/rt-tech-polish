@@ -356,7 +356,7 @@
     }
 
     /* Padding para o conteúdo não ficar embaixo da bottom nav */
-    body {
+    .navcont {
         padding-bottom: 75px;
     }
 }
