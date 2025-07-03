@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </footer>
         <WhatsAppButton
-          phoneNumber="5511987654321"
+          phoneNumber="5511978915000"
           message="Olá! Gostaria de mais informações sobre seus serviços."
         />
 
@@ -28,8 +28,6 @@ export default function RootLayout({ children }) {
       </body>
 
     </html>
-
-
   )
 }
 

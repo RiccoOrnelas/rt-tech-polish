@@ -206,6 +206,14 @@
 
     }
 
+    .carBenefits h2 {
+
+
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+    }
+
     .benefit {
         min-width: 80dvw;
         max-width: 88%;

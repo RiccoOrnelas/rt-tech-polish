@@ -14,7 +14,7 @@ const WhatsAppButton = ({ phoneNumber = '5511978915000', message = 'Olá! Gostar
             rel="noopener noreferrer"
             className={styles.whatsappButton}
             aria-label="Contato pelo WhatsApp"
-            style={{ position: 'fixed', bottom: '50px', right: '50px' }} // Forçando posição inline para garantir
+            style={{ position: 'fixed', bottom: '80px', right: '10px' }} // Forçando posição inline para garantir
         >
             {/* Ícone do WhatsApp usando SVG inline */}
             <svg
