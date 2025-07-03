@@ -1,3 +1,4 @@
+
 'use client'
 import Head from 'next/head'
 import { useState } from 'react'
@@ -10,22 +11,22 @@ const montserrat = Montserrat(
         subsets: ["latin"],
         weight: "500"
     }
-
 )
+
 const lexend = Lexend(
     {
         subsets: ["latin"],
         weight: "500"
     }
-
 )
+
 const poppins = Poppins(
     {
         subsets: ["latin"],
         weight: "500"
     }
-
 )
+
 export default function Contats() {
     const [formData, setFormData] = useState({
         nome: '',
@@ -37,6 +38,9 @@ export default function Contats() {
         mensagem: ''
     });
 
+    const [isLoading, setIsLoading] = useState(false);
+    const [message, setMessage] = useState('');
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -45,17 +49,46 @@ export default function Contats() {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Implement form submission logic here
-        alert('Orçamento solicitado com sucesso!');
+        setIsLoading(true);
+        setMessage('');
+
+        try {
+            const response = await fetch('../api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setMessage('Orçamento solicitado com sucesso! Entraremos em contato em breve.');
+                setFormData({
+                    nome: '',
+                    celular: '',
+                    email: '',
+                    carro: '',
+                    cor: '',
+                    ultimoTratamento: '',
+                    mensagem: ''
+                });
+            } else {
+                setMessage('Erro ao enviar solicitação. Tente novamente.');
+            }
+        } catch (error) {
+            console.error('Erro:', error);
+            setMessage('Erro ao enviar solicitação. Verifique sua conexão.');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (
         <div className={styles.container}>
-
-
             <header className={styles.header}>
                 <h1 className={`${styles.title} ${montserrat.className}`}>Fale Conosco</h1>
                 <p className={`${styles.subtitle} ${poppins.className}`}>
@@ -90,14 +123,16 @@ export default function Contats() {
                             <FaInstagram className={styles.socialIcon} />
                         </div>
                     </div>
-
-                    <a href="https://wa.me/5511978915000" className={styles.whatsappButton}>
-                        <FaWhatsapp className={styles.whatsappIcon} /> Link Direto para o WhatsApp
-                    </a>
                 </div>
 
                 <div className={styles.formContainer}>
                     <h2 className={styles.formTitle}>Deixe aqui seus dados para receber um Orçamento:</h2>
+
+                    {message && (
+                        <div className={`${styles.message} ${message.includes('sucesso') ? styles.success : styles.error}`}>
+                            {message}
+                        </div>
+                    )}
 
                     <form onSubmit={handleSubmit} className={styles.form}>
                         <div className={styles.formRow}>
@@ -110,6 +145,7 @@ export default function Contats() {
                                     value={formData.nome}
                                     onChange={handleChange}
                                     required
+                                    disabled={isLoading}
                                 />
                             </div>
 
@@ -122,48 +158,62 @@ export default function Contats() {
                                     value={formData.celular}
                                     onChange={handleChange}
                                     required
+                                    disabled={isLoading}
                                 />
                             </div>
                         </div>
 
                         <div className={styles.formRow}>
                             <div className={`${styles.formGroup} ${lexend.className}`}>
-                                <label htmlFor="carro">Qual Seu Carro?</label>
+                                <label htmlFor="email">Email:</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                    disabled={isLoading}
+                                />
+                            </div>
+
+                            <div className={`${styles.formGroup} ${lexend.className}`}>
+                                <label htmlFor="carro">Carro:</label>
                                 <input
                                     type="text"
                                     id="carro"
                                     name="carro"
                                     value={formData.carro}
                                     onChange={handleChange}
-                                    required
+                                    disabled={isLoading}
                                 />
                             </div>
+                        </div>
 
+                        <div className={styles.formRow}>
                             <div className={`${styles.formGroup} ${lexend.className}`}>
-                                <label htmlFor="cor">Cor do Carro:</label>
+                                <label htmlFor="cor">Cor:</label>
                                 <input
                                     type="text"
                                     id="cor"
                                     name="cor"
                                     value={formData.cor}
                                     onChange={handleChange}
-                                    required
+                                    disabled={isLoading}
                                 />
                             </div>
-                        </div>
 
-                        <div className={`${styles.formGroup} ${lexend.className}`}>
-                            <label htmlFor="ultimoTratamento">
-                                Quando foi a última vez que seu carro recebeu um tratamento na pintura?
-                            </label>
-                            <input
-                                type="text"
-                                id="ultimoTratamento"
-                                name="ultimoTratamento"
-                                value={formData.ultimoTratamento}
-                                onChange={handleChange}
-                                placeholder="Insira uma resposta aqui"
-                            />
+                            <div className={`${styles.formGroup} ${lexend.className}`}>
+                                <label htmlFor="ultimoTratamento">Último Tratamento:</label>
+                                <input
+                                    type="text"
+                                    id="ultimoTratamento"
+                                    name="ultimoTratamento"
+                                    value={formData.ultimoTratamento}
+                                    onChange={handleChange}
+                                    disabled={isLoading}
+                                />
+                            </div>
                         </div>
 
                         <div className={`${styles.formGroup} ${lexend.className}`}>
@@ -173,17 +223,21 @@ export default function Contats() {
                                 name="mensagem"
                                 value={formData.mensagem}
                                 onChange={handleChange}
-                                rows="5"
-                            ></textarea>
+                                rows="4"
+                                disabled={isLoading}
+                            />
                         </div>
 
-                        <button type="submit" className={styles.submitButton}>
-                            Solicitar Orçamento
+                        <button
+                            type="submit"
+                            className={styles.submitButton}
+                            disabled={isLoading}
+                        >
+                            {isLoading ? 'Enviando...' : 'Solicitar Orçamento'}
                         </button>
                     </form>
                 </div>
             </main>
-
         </div>
     );
 }
