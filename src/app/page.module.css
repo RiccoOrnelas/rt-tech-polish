@@ -23,6 +23,7 @@
   padding: 0.1em 0.3em;
 }
 
+
 .carBenefits {
   background-color: #000;
   color: #fff;
@@ -45,7 +46,7 @@
 }
 
 .benefit {
-  background-color: #444;
+  background-color: #0c0c0c;
   border-radius: 10px;
   padding: 20px;
   max-width: 260px;
@@ -174,6 +175,79 @@
 
   .carBenefits {
     padding: 20px 5px;
+  }
+
+
+  .supllyimages {
+
+    gap: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 2px;
+
+  }
+
+  .supllyitens img {
+    width: 100px;
+    height: 18px;
+  }
+
+  .marker {
+    padding: 0%;
+    margin: 0%;
+    font-size: 22px;
+  }
+
+  .topText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin-top: 3px;
+    height: auto;
+  }
+
+  .services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carBenefits {
+
+
+    padding: 2px;
+    text-align: center;
+
+  }
+
+  .carBenefits h2 {
+
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  .benefit {
+    min-width: 80dvw;
+    max-width: 88%;
+  }
+
+  .benefit img {
+    max-width: 80%;
+  }
+
+  .benefit p {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: medium;
+
+  }
+
+  .benefit h3 br {
+    display: none;
   }
 
 
