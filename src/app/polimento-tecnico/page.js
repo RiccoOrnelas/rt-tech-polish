@@ -57,10 +57,7 @@ export default function PolimentoTecnico() {
             url: "/assets/imagem8.jpg",
             alt: "Imagem 8",
         },
-        {
-            url: "/assets/imagem9.jpg",
-            alt: "Imagem 9",
-        }
+
 
 
     ]
