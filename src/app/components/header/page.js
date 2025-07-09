@@ -117,7 +117,7 @@ export default function Header() {
                     href="/"
                     className={`${styles.bottomNavItem} ${isActiveRoute('/') ? styles.active : ''}`}
                 >
-                    <FaHome size={20} />
+                    <FaHome size={30} />
                     <span>Início</span>
                 </Link>
 
@@ -125,7 +125,7 @@ export default function Header() {
                     href="/polimento-tecnico"
                     className={`${styles.bottomNavItem} ${isActiveRoute('/polimento-tecnico') ? styles.active : ''}`}
                 >
-                    <FaStar size={20} />
+                    <FaStar size={30} />
                     <span>Polimento</span>
                 </Link>
 
@@ -133,7 +133,7 @@ export default function Header() {
                     href="/coat"
                     className={`${styles.bottomNavItem} ${isActiveRoute('/coat') ? styles.active : ''}`}
                 >
-                    <FaShieldAlt size={20} />
+                    <FaShieldAlt size={30} />
                     <span>Vitrificação</span>
                 </Link>
 
@@ -141,7 +141,7 @@ export default function Header() {
                     href="/contats"
                     className={`${styles.bottomNavItem} ${isActiveRoute('/contats') ? styles.active : ''}`}
                 >
-                    <FaComments size={20} />
+                    <FaComments size={30} />
                     <span>Contato</span>
                 </Link>
 
@@ -149,7 +149,7 @@ export default function Header() {
                     href="/about"
                     className={`${styles.bottomNavItem} ${isActiveRoute('/about') ? styles.active : ''}`}
                 >
-                    <FaUsers size={20} />
+                    <FaUsers size={30} />
                     <span>Sobre</span>
                 </Link>
             </nav>

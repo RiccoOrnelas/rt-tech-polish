@@ -142,6 +142,7 @@ export default function PolimentoTecnico() {
 
 
             <section className={styles.gallery}>
+                <h2 className={`${bebas.className}`}>Veja alguns espelhos sobre rodas! </h2>
                 <Gallery imagens={galeryImages}></Gallery>
             </section>
 
@@ -151,13 +152,13 @@ export default function PolimentoTecnico() {
             <section className={styles.types}>
                 <div className={styles.polishs}>
 
-                    <h1>Temos o melhor pro seu carro!</h1>
+                    <h1 className={`${bebas.className} ${styles.cardTitle}`}>Temos o melhor pro seu carro!</h1>
 
                     <div className={styles.priceContainer}>
                         <div className={styles.polimento}>
                             <Image src='/assets/golf.jpg' alt="Carro polido" width={300} height={400} className={styles.imagecard}></Image >
                             <div className={styles.descriptions}>
-                                <h2 className={styles.cardTitle}>Polimento Técnico Comercial</h2>
+                                <h2 className={`${bebas.className} ${styles.cardTitle}`}>Polimento Técnico Comercial</h2>
                                 <p className={`${lexend.className} ${styles.cardText}`}> O objetivo aqui é remover riscos e marcas mais superficiais, e renovar o brilho do carro, gerando uma transformação mais objetiva.
 
                                     Após o tratamento, aplicamos uma proteção que dura até 7 meses na Pintura. </p>
