@@ -100,9 +100,13 @@ export default function Header() {
                 </button>
                 <ul className={styles.mobileLinks}>
                     <li><Link href="/" onClick={closeMenu}>Início</Link></li>
+                    <li className={styles.divisor}>|</li>
                     <li><Link href="/polimento-tecnico" onClick={closeMenu}>Polimento Técnico</Link></li>
+                    <li className={styles.divisor}>|</li>
                     <li><Link href="/coat" onClick={closeMenu}>Vitrificação</Link></li>
+                    <li className={styles.divisor}>|</li>
                     <li><Link href="/contats" onClick={closeMenu}>Fale Conosco</Link></li>
+                    <li className={styles.divisor}>|</li>
                     <li><Link href="/about" onClick={closeMenu}>Sobre nós</Link></li>
                 </ul>
             </div>

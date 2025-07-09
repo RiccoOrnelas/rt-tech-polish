@@ -42,6 +42,7 @@
 
 .imageCard {
     overflow: hidden;
+    height: 256px;
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
@@ -306,7 +307,7 @@
     font-size: 14px;
 }
 
-@media (max-width: 486px) {
+@media (min-width: 360px) and (max-width: 486px) {
 
     .tituloBackground h2 {
 
@@ -320,10 +321,13 @@
 
     .imagem {
         max-width: 140px;
+        min-height: 140px;
     }
 
     .imageCard {
         max-width: 140px;
+        max-height: 140px;
+
 
     }
 
@@ -331,7 +335,6 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
         justify-content: center;
     }
 }

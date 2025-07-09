@@ -86,9 +86,7 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
     <div className={styles.galeriaContainer}>
       <div className={styles.galeriaWrapper}>
         <div className={styles.tituloWrapper}>
-          <div className={styles.tituloBackground}>
-            <h2 className={bebas.className}>GALERIA DE RESULTADOS</h2>
-          </div>
+
         </div>
 
         <div className={styles.imageGrid}>
