@@ -111,10 +111,12 @@
   color: orange;
   margin-bottom: 15px;
   font-size: 2rem;
-  text-decoration: underline;
+
 }
 
-
+.gallery h1 {
+  font-size: 2rem;
+}
 
 .supllyimages {
   display: flex;

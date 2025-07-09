@@ -72,7 +72,7 @@ export default function Home() {
     ]
     const supllyimages = [
         {
-            imgUrl: "/assets/vonixx.png",
+            imgUrl: "/assets/Vonixx.png",
             alt: "vonixx",
         },
         {
@@ -153,6 +153,7 @@ export default function Home() {
             </section>
 
             <section className={styles.gallery}>
+                <h1 className={`${bebas.className} `}>Veja alguns resultados</h1>
                 <Gallery imagens={galeryImages}></Gallery>
             </section>
 

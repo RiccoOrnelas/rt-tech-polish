@@ -1,8 +1,14 @@
 'use client';
 import { useRef, useState, useEffect } from 'react';
 import styles from './page.module.css';
+import { Bebas_Neue } from 'next/font/google';
 
+const bebas = Bebas_Neue({
+    subsets: ["latin"],
+    weight: "400"
+})
 export default function ServicesCarousel() {
+
     const slides = [
         {
             title: 'Polimento Técnico',
@@ -57,7 +63,7 @@ export default function ServicesCarousel() {
 
     return (
         <section className={styles.carouselSection}>
-            <h2 className={styles.carouselTitle}>Nossos Serviços</h2>
+            <h2 className={`${bebas.className} ${styles.carouselTitle} `} >Nossos Serviços</h2>
 
             <div className={styles.carouselWrapper}>
                 <button
