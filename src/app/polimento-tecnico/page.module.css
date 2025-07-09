@@ -90,6 +90,11 @@
     height: auto;
 }
 
+.gallery h2 {
+    color: #ffa500;
+
+}
+
 .polishs h1 {
     display: flex;
     color: #ffa500;
