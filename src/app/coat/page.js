@@ -104,6 +104,19 @@ export default function Vitrificacao() {
             url: "/assets/vtcompass2.jpg",
             alt: "Compass branco Vitrificado",
         },
+        {
+            url: "/assets/vtpolo.jpg",
+            alt: "Compass branco Vitrificado",
+        },
+        {
+            url: "/assets/vtpolo2.jpg",
+            alt: "Compass branco Vitrificado",
+        },
+        {
+            url: "/assets/vtpolo3.jpg",
+            alt: "Compass branco Vitrificado",
+        },
+
 
     ]
     return (

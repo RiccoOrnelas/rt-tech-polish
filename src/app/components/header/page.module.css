@@ -274,8 +274,6 @@
         display: flex;
     }
 
-
-
     .nav {
         justify-content: flex-end;
     }
@@ -372,8 +370,6 @@
         grid-row: 2;
     }
 
-
-
     .nav {
         max-height: 0px;
     }
@@ -381,12 +377,4 @@
     .socialLinks {
         margin-right: 8px;
     }
-
-
-
-
-
-
-
-
 }
