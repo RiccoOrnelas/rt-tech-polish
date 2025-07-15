@@ -26,39 +26,81 @@ const lexend = Lexend({
 export default function PolimentoTecnico() {
     const galeryImages = [
         {
-            url: "/assets/imagem1.jpg",
-            alt: "Imagem 1",
+            url: "/assets/prisma.jpg",
+            alt: "Polimento Técnico Premium - Prisma",
         },
         {
-            url: "/assets/imagem2.jpg",
-            alt: "Imagem 2",
+            url: "/assets/prisma1.png",
+            alt: "Polimento Técnico Premium - Prisma",
+        },
+        {
+            url: "/assets/prisma2.png",
+            alt: "Polimento Técnico Premium - Prisma",
+        },
+        {
+            url: "/assets/prisma3.jpg",
+            alt: "Polimento Técnico Premium - Prisma",
+        },
+        {
+            url: "/assets/gol5.jpg",
+            alt: "Polimento Técnico Premium - Gol",
+        },
+        {
+            url: "/assets/gol1.png",
+            alt: "Polimento Técnico Premium - Gol",
+        },
+        {
+            url: "/assets/gol2.png",
+            alt: "Polimento Técnico Premium - Gol",
+        },
+        {
+            url: "/assets/gol3.png",
+            alt: "Polimento Técnico Premium - Gol",
+        },
+        {
+            url: "/assets/gol4.jpg",
+            alt: "Polimento Técnico Premium - Gol",
+        },
+        {
+            url: "/assets/ptonix.jpg",
+            alt: "Polimento Técnico Premium - Onix",
+        },
+        {
+            url: "/assets/ptonix1.jpg",
+            alt: "Polimento Técnico Premium - Onix",
+        },
+        {
+            url: "/assets/ptonix2.jpg",
+            alt: "Polimento Técnico Premium - Onix",
+        },
+        {
+            url: "/assets/ptonix3.jpg",
+            alt: "Polimento Técnico Premium - Onix",
+        },
+        {
+            url: "/assets/ptonix4.jpg",
+            alt: "Polimento Técnico Premium - Onix",
+        }, {
+            url: "/assets/polimento.jpg",
+            alt: "Polimento Técnico Premium Jaguar",
         },
         {
             url: "/assets/imagem3.jpg",
-            alt: "Imagem 3",
+            alt: "Polimento Técnico Premium Jaguar",
+
         },
         {
             url: "/assets/imagem4.jpg",
-            alt: "Imagem 4",
-        },
-        {
-            url: "/assets/imagem5.jpg",
-            alt: "Imagem 5",
-        },
-        {
-            url: "/assets/imagem6.jpg",
-            alt: "Imagem 6",
+            alt: "Polimento Técnico Premium Jaguar",
         },
         {
             url: "/assets/imagem7.jpg",
-            alt: "Imagem 7",
+            alt: "Polimento Técnico Premium  Fusca",
         },
         {
             url: "/assets/imagem8.jpg",
-            alt: "Imagem 8",
+            alt: "Polimento Técnico Premium Fusca",
         },
-
-
 
     ]
     const supllyimages = [
@@ -171,7 +213,7 @@ export default function PolimentoTecnico() {
                         <div className={styles.polimento}>
                             <Image src='/assets/bmw.jpg' alt="Carro polido" width={300} height={400} layout="intrinsic" className={styles.imagecard} ></Image >
                             <div className={styles.descriptions}>
-                                <h2 className={styles.cardTitle}>Polimento Técnico Premium</h2>
+                                <h2 className={`${bebas.className} ${styles.cardTitle}`}>Polimento Técnico Premium</h2>
                                 <p className={`${lexend.className} ${styles.cardText}`}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma renovação mais profunda na pintura!
                                     Após o Tratamento, a pintura recebe uma proteção com durabilidade de até 12 meses. </p>
                                 <h5>Valor:</h5>
