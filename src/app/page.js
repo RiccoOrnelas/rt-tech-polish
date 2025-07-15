@@ -32,40 +32,78 @@ export default function Home() {
 
     const galeryImages = [
         {
-            url: "/assets/imagem1.jpg",
-            alt: "Imagem 1",
+            url: "/assets/higienizacao.jpeg",
+            alt: "Antes e Depois Banco de couro Claro",
         },
         {
-            url: "/assets/imagem2.jpg",
-            alt: "Imagem 2",
+            url: "/assets/higitcros.jpg",
+            alt: "T-cros Com bancos Higienizados e Hidratação Completa",
         },
         {
-            url: "/assets/imagem3.jpg",
-            alt: "Imagem 3",
+            url: "/assets/gol1.png",
+            alt: "Gol Polimento Técnico Premium",
         },
         {
-            url: "/assets/imagem4.jpg",
-            alt: "Imagem 4",
+            url: "/assets/gol3.png",
+            alt: "Gol Polimento Técnico Premium",
         },
         {
-            url: "/assets/imagem5.jpg",
-            alt: "Imagem 5",
+            url: "/assets/corolahigi.jpg",
+            alt: "Corola com bancos de couro claros Higienizado e Hidratado",
         },
         {
-            url: "/assets/imagem6.jpg",
-            alt: "Imagem 6",
+            url: "/assets/corolahigi2.png",
+            alt: "Corola com bancos de couro claros Higienizado e Hidratado",
         },
         {
-            url: "/assets/imagem7.jpg",
-            alt: "Imagem 7",
+            url: "/assets/corolahigi3.png",
+            alt: "Corola com bancos de couro claros Higienizado e Hidratado",
         },
         {
-            url: "/assets/imagem8.jpg",
-            alt: "Imagem 8",
+            url: "/assets/corolahigi4.png",
+            alt: "Corola com bancos de couro claros Higienizado e Hidratado",
+        },
+
+        {
+            url: "/assets/vts10.jpg",
+            alt: "S10 Reliquia vitrificada com ZR53",
         },
         {
-            url: "/assets/imagem9.jpg",
-            alt: "Imagem 9",
+            url: "/assets/vts102.jpg",
+            alt: "S10 Reliquia vitrificada com ZR53",
+        },
+        {
+            url: "/assets/vts103.jpg",
+            alt: "S10 Reliquia vitrificada com ZR53",
+        },
+        {
+            url: "/assets/higicorola.png",
+            alt: "Corola Brad bancos de tecido higienizado",
+        },
+        {
+            url: "/assets/higicorola2.jpg",
+            alt: "Corola Brad bancos de tecido higienizado",
+        },
+        {
+            url: "/assets/higicorola3.jpg",
+            alt: "Corola Brad bancos de tecido higienizado",
+        },
+
+        {
+            url: "/assets/IMG_20210715_015050.jpg",
+            alt: "Restauração de Farol",
+        },
+        {
+            url: "/assets/mini2.jpg",
+            alt: "Mini cooper com Polimento Técnico Comercial",
+        },
+        {
+            url: "/assets/mini1.jpg",
+            alt: "Mini cooper com Polimento Técnico Comercial",
+        },
+        {
+            url: "/assets/mini4.jpg",
+            alt: "Mini cooper com Polimento Técnico Comercial",
         }
 
 
