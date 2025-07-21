@@ -16,7 +16,7 @@ export default function Depoiments() {
                 <div className={styles.depoimento}>
                     <div className={styles["depoimento-conteudo"]}>
                         <div className={styles["usuario-info"]}>
-                            <div className={styles.avatar}>R</div>
+                            <div className={styles.avatar}>C</div>
                             <div className={styles["usuario-detalhes"]}>
                                 <div className={styles["usuario-nome"]}>Caio ramos</div>
                                 <div className={styles["usuario-tipo"]}>Cliente Verificado • 3 avaliações</div>
@@ -48,7 +48,7 @@ export default function Depoiments() {
                 <div className={styles.depoimento}>
                     <div className={styles["depoimento-conteudo"]}>
                         <div className={styles["usuario-info"]}>
-                            <div className={styles.avatar}>J</div>
+                            <div className={styles.avatar}>P</div>
                             <div className={styles["usuario-detalhes"]}>
                                 <div className={styles["usuario-nome"]}>Pedro Carvalho</div>
                                 <div className={styles["usuario-tipo"]}>5 avaliações </div>

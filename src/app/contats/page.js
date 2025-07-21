@@ -164,18 +164,7 @@ export default function Contats() {
                         </div>
 
                         <div className={styles.formRow}>
-                            <div className={`${styles.formGroup} ${lexend.className}`}>
-                                <label htmlFor="email">Email:</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    disabled={isLoading}
-                                />
-                            </div>
+
 
                             <div className={`${styles.formGroup} ${lexend.className}`}>
                                 <label htmlFor="carro">Carro:</label>
@@ -204,7 +193,7 @@ export default function Contats() {
                             </div>
 
                             <div className={`${styles.formGroup} ${lexend.className}`}>
-                                <label htmlFor="ultimoTratamento">Último Tratamento:</label>
+                                <label htmlFor="ultimoTratamento">Qual sua cidade e bairro?</label>
                                 <input
                                     type="text"
                                     id="ultimoTratamento"
