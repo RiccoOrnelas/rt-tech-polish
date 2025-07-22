@@ -3,9 +3,9 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
   const body = await request.json();
 
-  const { nome, celular, email, carro, cor, ultimoTratamento, mensagem } = body;
+  const { nome, celular, carro, cor, location, mensagem } = body;
 
-  if (!nome || !celular || !email) {
+  if (!nome || !celular) {
     return new Response(JSON.stringify({ message: 'Campos obrigatórios não preenchidos' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' },
@@ -28,10 +28,9 @@ export async function POST(request) {
       <!-- ... o mesmo conteúdo HTML do seu email ... -->
       <p><strong>Nome:</strong> ${nome}</p>
       <p><strong>Celular:</strong> ${celular}</p>
-      <p><strong>Email:</strong> ${email}</p>
       <p><strong>Carro:</strong> ${carro || 'Não informado'}</p>
       <p><strong>Cor:</strong> ${cor || 'Não informado'}</p>
-      <p><strong>Último Tratamento:</strong> ${ultimoTratamento || 'Não informado'}</p>
+      <p><strong>Localização:</strong> ${location || 'Não informado'}</p>
       <p><strong>Mensagem:</strong> ${mensagem || 'Sem mensagem adicional.'}</p>
     `,
   };

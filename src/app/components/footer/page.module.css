@@ -1,22 +1,32 @@
-.footer {
+.containerFooter {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #000000;
-
     border-top: 1px solid white;
     color: #888;
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
+}
 
-
+.priv {
+    color: #e59a00;
+    text-decoration: underline;
 }
 
 
 
-@media (max-width:460) {
-    .footer {
-        margin-bottom: 45px;
+
+@media (min-width:380) and (max-width:460) {
+    .datasCompany {
+        margin-bottom: 2cm;
     }
+
+    .priv {
+        color: #e59a00;
+        text-decoration: underline;
+    }
+
+
 }

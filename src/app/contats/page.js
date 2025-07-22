@@ -1,4 +1,3 @@
-
 'use client'
 import Head from 'next/head'
 import { useState } from 'react'
@@ -31,10 +30,9 @@ export default function Contats() {
     const [formData, setFormData] = useState({
         nome: '',
         celular: '',
-        email: '',
         carro: '',
         cor: '',
-        ultimoTratamento: '',
+        location: '',
         mensagem: ''
     });
 
@@ -70,10 +68,9 @@ export default function Contats() {
                 setFormData({
                     nome: '',
                     celular: '',
-                    email: '',
                     carro: '',
                     cor: '',
-                    ultimoTratamento: '',
+                    location: '',
                     mensagem: ''
                 });
             } else {
@@ -129,7 +126,19 @@ export default function Contats() {
                     <h2 className={styles.formTitle}>Deixe aqui seus dados para receber um Orçamento:</h2>
 
                     {message && (
-                        <div className={`${styles.message} ${message.includes('sucesso') ? styles.success : styles.error}`}>
+                        <div
+                            className={styles.message}
+                            style={{
+                                backgroundColor: message.includes('sucesso') ? '#d4edda' : '#f8d7da',
+                                color: message.includes('sucesso') ? '#155724' : '#721c24',
+                                border: `1px solid ${message.includes('sucesso') ? '#c3e6cb' : '#f5c6cb'}`,
+                                padding: '12px 16px',
+                                borderRadius: '8px',
+                                margin: '16px 0',
+                                fontSize: '14px',
+                                fontWeight: '500'
+                            }}
+                        >
                             {message}
                         </div>
                     )}
@@ -164,8 +173,6 @@ export default function Contats() {
                         </div>
 
                         <div className={styles.formRow}>
-
-
                             <div className={`${styles.formGroup} ${lexend.className}`}>
                                 <label htmlFor="carro">Carro:</label>
                                 <input
@@ -193,12 +200,12 @@ export default function Contats() {
                             </div>
 
                             <div className={`${styles.formGroup} ${lexend.className}`}>
-                                <label htmlFor="ultimoTratamento">Qual sua cidade e bairro?</label>
+                                <label htmlFor="location">Qual sua cidade e bairro?</label>
                                 <input
                                     type="text"
-                                    id="ultimoTratamento"
-                                    name="ultimoTratamento"
-                                    value={formData.ultimoTratamento}
+                                    id="location"
+                                    name="location"
+                                    value={formData.location}
                                     onChange={handleChange}
                                     disabled={isLoading}
                                 />
