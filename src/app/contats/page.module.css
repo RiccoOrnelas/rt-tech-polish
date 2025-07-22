@@ -181,6 +181,27 @@
     font-size: 0.9rem;
 }
 
+.message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #3c763d;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #842029;
+}
+
+
 /* Responsividade para Tablets (768px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .title {
