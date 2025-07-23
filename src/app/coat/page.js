@@ -250,7 +250,7 @@ export default function Vitrificacao() {
 
                 <div className={styles.priceBox}>
                     <h3 className={`${styles.price} ${poppins.className}`}>
-                        R$ <span>799,99 <span>á partir</span></span>
+                        10X  R$ <span>89,99 <span>á partir</span></span>
                     </h3>
 
 
@@ -264,7 +264,7 @@ export default function Vitrificacao() {
                 </div>
 
                 <p className={styles.textoInvestimento}>
-                    * O valor do investimento varia conforme o tamanho do veículo e o vitrificador escolhido
+                    * Desconto especial no Pix
                 </p>
 
                 <button className={styles.botaoOrcamento}>
