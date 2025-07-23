@@ -18,15 +18,13 @@
 
 
 
-@media (min-width:300) and (max-width:460) {
-    .datasCompany {
-        margin-bottom: 2cm;
-    }
+@media (min-width:300px) and (max-width:490px) {
+  .datasCompany {
+    margin-bottom: 2cm;
+  }
 
-    .priv {
-        color: #e59a00;
-        text-decoration: underline;
-    }
-
-
+  .priv {
+    color: #e59a00;
+    text-decoration: underline;
+  }
 }
