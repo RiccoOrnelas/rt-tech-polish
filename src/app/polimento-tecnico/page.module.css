@@ -135,6 +135,7 @@
 
     text-align: center;
     color: #ffffff;
+    min-width: 299px;
     max-width: 300px;
     background-color: #0c0c0c;
     align-items: center;
@@ -154,8 +155,9 @@
 
 .imagecard {
     display: inline-block;
-    width: auto;
+    max-width: auto;
     height: auto;
+
 
 }
 
