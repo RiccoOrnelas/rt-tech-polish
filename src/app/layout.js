@@ -4,37 +4,34 @@ import Header from "./components/header/page";
 import Footer from "./components/footer/page";
 import WhatsAppButton from "./components/whasBtn/page"
 import { GoogleTagManager } from '@next/third-parties/google'
-import Head from "next/head";
-export default function RootLayout({ children }) {
+import Script from 'next/script'
 
+const geist = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <Head>
-        {/* Google Ads (gtag.js) */}
-        {/* Google Ads Global Site Tag (gtag.js) */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=AW-984971525`}></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-984971525');
-          `
-        }} />
-      </Head>
-      <body className="container">
+      <body className={`container ${geist.variable} ${geistMono.variable}`}>
         <header>
           <Header />
         </header>
 
         <main className="main">
           {children}
-
         </main>
 
         <footer className="footer">
           <Footer />
         </footer>
+
         <WhatsAppButton
           phoneNumber="5511978915000"
           message="Olá! Gostaria de mais informações sobre seus serviços."
@@ -42,8 +39,20 @@ export default function RootLayout({ children }) {
 
         <GoogleTagManager gtmId="GTM-PSZ8X95N" />
 
+        {/* Google Ads (gtag.js) - Método otimizado */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-984971525"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-984971525');
+          `}
+        </Script>
       </body>
-
     </html>
   )
 }
