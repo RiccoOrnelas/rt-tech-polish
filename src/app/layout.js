@@ -4,24 +4,24 @@ import Header from "./components/header/page";
 import Footer from "./components/footer/page";
 import WhatsAppButton from "./components/whasBtn/page"
 import { GoogleTagManager } from '@next/third-parties/google'
+import Head from "next/head";
 export default function RootLayout({ children }) {
 
   return (
     <html lang="pt-BR">
-      <head>
+      <Head>
         {/* Google Ads (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-984971525"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-984971525');
-            `,
-          }}
-        />
-      </head>
+        {/* Google Ads Global Site Tag (gtag.js) */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=AW-984971525`}></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-984971525');
+          `
+        }} />
+      </Head>
       <body className="container">
         <header>
           <Header />
