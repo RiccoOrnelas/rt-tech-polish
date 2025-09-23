@@ -20,6 +20,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <body className={`container ${geist.variable} ${geistMono.variable}`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PSZ8X95N"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+
         <header>
           <Header />
         </header>
@@ -56,4 +67,3 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
-
