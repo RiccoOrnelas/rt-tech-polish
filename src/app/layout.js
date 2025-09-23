@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className={`container ${geist.variable} ${geistMono.variable}`}>
-        {/* Google Tag Manager - Script LOGO NO INÍCIO do body */}
+      <head>
+        {/* Google Tag Manager - SCRIPT NO HEAD (recomendação oficial) */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -29,8 +29,25 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-PSZ8X95N');
           `}
         </Script>
+        {/* End Google Tag Manager */}
 
-        {/* Google Tag Manager (noscript) */}
+        {/* Google Ads (gtag.js) - TAMBÉM NO HEAD */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-984971525"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-984971525');
+          `}
+        </Script>
+      </head>
+
+      <body className={`container ${geist.variable} ${geistMono.variable}`}>
+        {/* Google Tag Manager (noscript) - APENAS ESTE NO BODY */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PSZ8X95N"
@@ -57,20 +74,6 @@ export default function RootLayout({ children }) {
           phoneNumber="5511978915000"
           message="Olá! Gostaria de mais informações sobre seus serviços."
         />
-
-        {/* Google Ads (gtag.js) - Método otimizado */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-984971525"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-984971525');
-          `}
-        </Script>
       </body>
     </html>
   )
