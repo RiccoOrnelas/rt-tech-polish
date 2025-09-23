@@ -1,7 +1,3 @@
-Perfeito! Aqui está um modelo de README técnico e objetivo, desenhado para programadores entenderem, rodarem, analisarem e contribuírem com seu projeto:
-
-***
-
 # rt-tech-polish
 
 ## Descrição
@@ -100,7 +96,3 @@ Pull Requests e Issues são bem-vindos.
 Siga convenções do Next.js/React, mantenha código comentado e commits claros.
 
 ***
-
-Se quiser exemplos práticos de uso/composição de componentes ou detalhes avançados, só avisar!
-
-[1](https://github.com/RiccoOrnelas/rt-tech-polish/tree/main/src/app/components/header)
