@@ -12,9 +12,13 @@ export default function RootLayout({ children }) {
       <GoogleTagManager gtmId="GTM-PSZ8X95N" />
       <body className="container">
         <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSZ8X95N"
-            height="0" width="0" style="display:none;visibility:hidden">
-          </iframe></noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-PSZ8X95N"
+    height="0"
+    width="0"
+    style={{ display: "none", visibility: "hidden" }}
+  ></iframe>
+</noscript>
         <header>
           <Header />
         </header>
