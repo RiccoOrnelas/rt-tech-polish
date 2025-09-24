@@ -5,7 +5,6 @@ import Footer from "./components/footer/page";
 import WhatsAppButton from "./components/whasBtn/page"
 import { GoogleTagManager } from '@next/third-parties/google'
 
-// ✅ METADATA DEVE FICAR AQUI FORA DA FUNÇÃO
 export const metadata = {
   title: 'RT Polimento Técnico Delivery | Serviço Profissional em Domicílio - São Paulo',
   description: 'Polimento técnico profissional com entrega em domicílio em São Paulo. Restauração de faróis, para-choques e superfícies automotivas. Agende online e receba em casa com qualidade garantida.',
