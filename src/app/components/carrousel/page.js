@@ -12,27 +12,27 @@ export default function ServicesCarousel() {
     const slides = [
         {
             title: 'Polimento Técnico',
-            text: 'Ao realizar um Polimento Técnico na Pintura do Veículo, o carro fica livre de riscos e com aspecto de novo!',
+            text: 'Ao realizar um Polimento Técnico no veículo, são removidas marcas de lavagens e riscos do dia a dia, além de contaminações! O que deixa o veículo com aspecto espelhado, toque acetinado e com cara de carro novo! E ainda recebe uma proteção de pintura que dura até um ano!',
             img: '/assets/polimento.jpg',
         },
         {
             title: 'Vitrificação',
-            text: 'A Vitrificação cria uma película ultra-resistente que protege sua pintura contra arranhões leves e dá brilho intenso de longa duração.',
+            text: 'A Vitrificação cria uma película ultra-resistente que protege a pintura do veículo contra arranhões leves, como em uma pelicula de vidro do celular, além de ter grande resistência química! A durabilidade da proteção pode chegar até 5 anos! ',
             img: '/assets/vitrificacao.jpg',
         },
         {
             title: 'Higienização',
-            text: 'Higienização completa do interior: remoção de ácaros, odores e sujeiras profundas, deixando o ambiente interno do carro mais saudável.',
-            img: '/assets/higienizacao.jpeg',
+            text: 'A higienização completa do interior remove machas e sujeiras profundas, deixando o ambiente interno do carro mais novo e agradável. Além de eliminar bactérias, o que o torna também mais sadável!',
+            img: '/assets/higienizacao.jpeg'
         },
         {
             title: 'Cristalização de Vidros',
-            text: 'Tratamento nos vidros que reduz o acúmulo de água e aumenta a visibilidade em dias de chuva e neblina.',
+            text: ' O Tratamento nos vidros remove toda contaminação, o que reduz o acúmulo de água e após é aplicado um cristalizador que faz o vidro repelir a água, aumentando a visibilidade em dias de chuva e neblina.',
             img: '/assets/acidrain.jpg',
         },
         {
             title: 'Restauração de Faróis',
-            text: 'Remoção de amarelamento e micro-riscos nos faróis, devolvendo transparência e segurança ao iluminar à noite.',
+            text: 'Remoção de amarelamento e micro-riscos nos faróis, devolvendo transparência para um carro mair bonito, mas também segurança ao iluminar melhor à noite.',
             img: '/assets/restauracao-farois.jpg',
         },
     ];

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import styles from './page.module.css'
 import { FaMapMarkerAlt, FaPhone, FaFacebookF, FaInstagram, FaThumbsUp, FaWhatsapp } from 'react-icons/fa'
 import { Montserrat, Lexend, Poppins } from 'next/font/google'
-
+import { useRouter } from 'next/navigation'
 const montserrat = Montserrat(
     {
         subsets: ["latin"],
@@ -38,7 +38,10 @@ export default function Contats() {
 
     const [isLoading, setIsLoading] = useState(false);
     const [message, setMessage] = useState('');
-
+    const router = useRouter()
+    const redirect = () => {
+        return router.push("/")
+    }
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -73,6 +76,11 @@ export default function Contats() {
                     location: '',
                     mensagem: ''
                 });
+                setTimeout(() => {
+                    redirect()
+                }, 3000)
+
+
             } else {
                 setMessage('Erro ao enviar solicitação. Tente novamente.');
             }

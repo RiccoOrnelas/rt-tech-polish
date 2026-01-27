@@ -86,13 +86,7 @@ Utiliza transporte Gmail via Nodemailer (ver `src/app/api/send-email/route.js`).
 ## Deploy
 
 Deploy automático em [Vercel](https://vercel.com/).  
-Arquivos de configuração em `vercel.json` e `next.config.mjs` (modifique conforme necessidade).
+Arquivos de configuração em `vercel.json` e `next.config.mjs` 
 
 ***
 
-## Contribuição
-
-Pull Requests e Issues são bem-vindos.  
-Siga convenções do Next.js/React, mantenha código comentado e commits claros.
-
-***

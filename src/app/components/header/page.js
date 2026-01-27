@@ -69,7 +69,7 @@ export default function Header() {
                 </div>
 
                 <div className={styles.topBar}>
-                    <img src="/assets/logo.png" alt="RT Polimento Técnico" className={styles.logo} />
+                    <Link href='/'><img src="/assets/logo.png" alt="RT Polimento Técnico" className={styles.logo} /></Link>
                     <h1 className={styles.slogan}>
                         SEU CARRO FOI FEITO PARA BRILHAR E POR AQUI, BRILHO É COISA SÉRIA!
                     </h1>
@@ -86,12 +86,14 @@ export default function Header() {
                         <li><Link href="/about">Sobre nós</Link></li>
                     </ul>
                 </nav>
-            </header>
+            </header >
 
             {/* Overlay */}
-            {isMenuOpen && (
-                <div className={styles.overlay} onClick={closeMenu} />
-            )}
+            {
+                isMenuOpen && (
+                    <div className={styles.overlay} onClick={closeMenu} />
+                )
+            }
 
             {/* Menu Mobile Desktop */}
             <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.active : ''}`}>
@@ -153,7 +155,7 @@ export default function Header() {
                     <span>Sobre</span>
                 </Link>
             </nav>
-        </div>
+        </div >
         </>
     );
 }

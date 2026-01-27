@@ -160,7 +160,7 @@ export default function Home() {
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
                         <Image src="/assets/Restauracao.jpg" alt="Restauração" width={260} height={160} />
-                        <p className={lexend.className}>Ao realizar um Polimento Técnico na Pintura do Veículo, o carro fica livre de riscos e com aspecto de novo!</p>
+                        <p className={lexend.className}>Remove riscos, marcas e arranões das lavagens e do dia a dia! Devolvendo vida á pintura do carro.</p>
                     </div>
                     <div className={styles.benefit}>
                         <h3>BRILHO</h3>

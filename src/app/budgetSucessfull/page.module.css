@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+
+    padding-top: 30%;
+
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+
+
+    min-height: 60vh;
+    justify-content: center;
+    align-items: center;
+    max-height: 70dvh;
+}
+
+
+.main {
+    height: 100%;
+
+
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #f7a800;
+}
