@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import styles from './page.module.css';
 import { FaPhone, FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
 import Link from 'next/link';
+import BudgetSucessfull from '@/app/budgetSucessfull/page';
 
 
 export default function Contacts() {
@@ -36,7 +37,7 @@ export default function Contacts() {
                             </Link>
                         </div>
 
-                        <Link href={linkWhatsApp} target="_blank" className={styles.botaoOrcamento}>
+                        <Link href={"/budgetSucessfull"} target="_blank" className={styles.botaoOrcamento}>
                             <FaWhatsapp className={styles.iconeWhatsapp} />
                             Solicitar Orçamento
                         </Link>

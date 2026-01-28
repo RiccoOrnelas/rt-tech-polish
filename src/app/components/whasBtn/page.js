@@ -2,14 +2,14 @@
 
 import React from 'react';
 import styles from './page.module.css';
+import BudgetSucessfull from '@/app/budgetSucessfull/page';
 
-const WhatsAppButton = ({ phoneNumber = '5511978915000', message = 'Olá! Gostaria de mais informações.' }) => {
-    // Formata a URL do WhatsApp com o número de telefone e a mensagem
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+const WhatsAppButton = () => {
 
     return (
         <a
-            href={whatsappUrl}
+            href="/budgetSucessfull"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.whatsappButton}

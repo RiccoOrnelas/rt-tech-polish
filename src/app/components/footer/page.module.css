@@ -1,4 +1,5 @@
 .containerFooter {
+  .containerFooter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,23 +9,38 @@
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
-}
-
-.priv {
-    color: #e59a00;
-    text-decoration: underline;
-}
-
-
-
-
-@media (min-width:300px) and (max-width:490px) {
-  .datasCompany {
-    margin-bottom: 2cm;
   }
 
   .priv {
     color: #e59a00;
     text-decoration: underline;
   }
-}
+
+
+
+
+  @media (min-width:300px) and (max-width:490px) {
+    .datasCompany {
+      margin-bottom: 2cm;
+    }
+
+    .priv {
+      color: #e59a00;
+      text-decoration: underline;
+    }
+  }
+
+  .priv {
+    color: #e59a00;
+    text-decoration: underline;
+  }
+
+
+
+
+  @media (min-width:300) and (max-width:490) {
+    .datasCompany {
+      margin-bottom: 2cm;
+    }
+
+  }

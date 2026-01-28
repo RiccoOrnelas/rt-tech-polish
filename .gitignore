@@ -16,7 +16,7 @@
 # next.js
 /.next/
 /out/
-
+/public/assets/Assets.zip
 # production
 /build
 
