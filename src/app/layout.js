@@ -16,6 +16,18 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="pt-BR">
+     <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-82L99XM5LE"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-82L99XM5LE');
+          `,
+        }} />
+      </head>
 
       <body className="container">
         <noscript>
