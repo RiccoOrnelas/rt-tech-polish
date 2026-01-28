@@ -18,7 +18,7 @@ export default function Header() {
     const pathname = usePathname();
     const urlInsta = 'https://www.instagram.com/rtpolimentotecnico/'
     const urlFace = 'https://www.facebook.com/Rtpolimentotecnico/'
-    const numeroWhatsApp = '+5511947575844';
+    const numeroWhatsApp = '+5511978915000';
     const mensagemInicial = encodeURIComponent('Olá! Gostaria de solicitar um orçamento.');
     const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemInicial}`;
 
