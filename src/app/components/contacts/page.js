@@ -39,7 +39,7 @@ export default function Contacts() {
 
                         <Link href={"/budgetSucessfull"} target="_blank" className={styles.botaoOrcamento}>
                             <FaWhatsapp className={styles.iconeWhatsapp} />
-                            Solicitar Orçamento
+                            Tirar Dúvidas?
                         </Link>
                         <h4 className={styles.subTitle}>Atendemos todo ABC e grande SP!</h4>
 

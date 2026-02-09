@@ -6,6 +6,7 @@ import Contacts from "../components/contacts/page";
 import Depoiments from "@/app/components/depoiments/page";
 import { Anton, Poppins, Lexend, Bebas_Neue } from "next/font/google"
 import { FaPhone, FaWhatsapp } from 'react-icons/fa';
+import Link from "next/link";
 
 
 const anton = Anton({
@@ -152,7 +153,7 @@ export default function PolimentoTecnico() {
             </div>
 
             <section className={styles.carBenefits}>
-                <h2 className={bebas.className}>Benefícios do Polimento Técnico</h2>
+                <h2 className={`${bebas.className} ${styles.sectionTitle}`}>Benefícios do Polimento Técnico</h2>
                 <div className={styles.benefitsContainer}>
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
@@ -184,7 +185,7 @@ export default function PolimentoTecnico() {
 
 
             <section className={styles.gallery}>
-                <h2 className={`${bebas.className}`}>Veja alguns espelhos sobre rodas! </h2>
+                <h2 className={`${bebas.className} ${styles.sectionTitle}`}>Veja alguns espelhos sobre rodas! </h2>
                 <Gallery imagens={galeryImages}></Gallery>
             </section>
 
@@ -204,10 +205,13 @@ export default function PolimentoTecnico() {
                                 <p className={`${lexend.className} ${styles.cardText}`}> O objetivo aqui é remover riscos e marcas mais superficiais, e renovar o brilho do carro, gerando uma transformação mais objetiva.
 
                                     Após o tratamento, aplicamos uma proteção que dura até 7 meses na Pintura. </p>
-                                <h5>Valor:</h5>
+                                <h5 className={styles.value}>Valor:</h5>
                                 <h2 className={styles.price}>
-                                    R$ <span> 279,99 <span>á partir</span></span>
+                                    R$ <span> 299,99 <span>á partir</span></span>
                                 </h2>
+                                <br></br>
+                                <Link className={styles.clickHere} href="../budgetSucessfull">Solicite um Orçamento <FaWhatsapp></FaWhatsapp></Link>
+
                             </div>
                         </div>
                         <div className={styles.polimento}>
@@ -216,12 +220,17 @@ export default function PolimentoTecnico() {
                                 <h2 className={`${bebas.className} ${styles.cardTitle}`}>Polimento Técnico Premium</h2>
                                 <p className={`${lexend.className} ${styles.cardText}`}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma renovação mais profunda na pintura!
                                     Após o Tratamento, a pintura recebe uma proteção com durabilidade de até 12 meses. </p>
-                                <h5>Valor:</h5>
+                                <h5 className={styles.value}>Valor:</h5>
                                 <h2 className={styles.price}>
-                                    R$ <span>379,99 <span>á partir</span></span>
+                                    R$ <span>399,99 <span>á partir</span></span>
                                 </h2>
+                                <br></br>
+                                <Link className={styles.clickHere} href="../budgetSucessfull">Solicite um Orçamento <FaWhatsapp></FaWhatsapp></Link>
+
                             </div>
+
                         </div>
+
 
                     </div>
                 </div>
