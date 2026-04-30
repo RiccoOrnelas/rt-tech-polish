@@ -2,7 +2,10 @@ import React from 'react';
 import styles from './page.module.css';
 import Gallery from "../components/galery/page";
 import Image from 'next/image';
+import Link from 'next/link';
+import { FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { Poppins, Montserrat, Inter, Bebas_Neue } from 'next/font/google';
+
 
 const poppins = Poppins({
     weight: "400",
@@ -215,14 +218,21 @@ export default function Vitrificacao() {
                     <div className={styles.coatings}>
                         <Image
                             src="/assets/maxpro.jpg"
-                            alt="Formas de Pagamento"
+                            alt="Maxpro"
                             width={100}
                             height={25}
                         />
 
                         <Image
                             src="/assets/Nasiol.png"
-                            alt="Formas de Pagamento"
+                            alt="Nasiol"
+                            width={280}
+                            height={25}
+                        />
+
+                        <Image
+                            src="/assets/Vx45.png"
+                            alt="Vx45"
                             width={280}
                             height={25}
                         />
@@ -234,42 +244,13 @@ export default function Vitrificacao() {
                             height={25}
                         />
 
-                        <Image
-                            src="/assets/insignia.png"
-                            alt="Formas de Pagamento"
-                            width={280}
-                            height={25}
-                        />
-
                     </div>
 
                 </div>
             </section>
-            <section className={styles.pricesSection}>
-                <h2 className={`${styles.title} ${bebas.className}`}>Investimento</h2>
-
-                <div className={styles.priceBox}>
-                    <h3 className={`${styles.price} ${poppins.className}`}>
-                        10X  R$ <span>89,99 <span>á partir</span></span>
-                    </h3>
-
-
-                    <Image
-                        src="/assets/formaspagamento.png"
-                        alt="Formas de Pagamento"
-                        width={280}
-                        height={25}
-                    />
-
-                </div>
-
-                <p className={styles.textoInvestimento}>
-                    * Desconto especial no Pix
-                </p>
-
-                <button className={styles.botaoOrcamento}>
-                    Solicitar Orçamento de Vitrificação
-                </button>
+            <section className={styles.budget}>
+                <h1 className={`${styles.title} ${bebas.className}`}>Solicite um Orçamento Gratuito</h1>
+                <Link className={styles.clickHere} href="../budgetSucessfull"> Fale com um Técnico <FaWhatsapp></FaWhatsapp></Link>
             </section>
         </div>
     );

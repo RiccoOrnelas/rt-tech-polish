@@ -205,12 +205,10 @@ export default function PolimentoTecnico() {
                                 <p className={`${lexend.className} ${styles.cardText}`}> O objetivo aqui é remover riscos e marcas mais superficiais, e renovar o brilho do carro, gerando uma transformação mais objetiva.
 
                                     Após o tratamento, aplicamos uma proteção que dura até 7 meses na Pintura. </p>
-                                <h5 className={styles.value}>Valor:</h5>
-                                <h2 className={styles.price}>
-                                    R$ <span> 299,99 <span>á partir</span></span>
-                                </h2>
+
+
                                 <br></br>
-                                <Link className={styles.clickHere} href="../budgetSucessfull">Solicite um Orçamento <FaWhatsapp></FaWhatsapp></Link>
+                                <Link className={styles.clickHere} href="../budgetSucessfull">Fale Grátis com o Técnico <FaWhatsapp></FaWhatsapp></Link>
 
                             </div>
                         </div>
@@ -218,14 +216,11 @@ export default function PolimentoTecnico() {
                             <Image src='/assets/bmw.jpg' alt="Carro polido" width={300} height={400} layout="intrinsic" className={styles.imagecard} ></Image >
                             <div className={styles.descriptions}>
                                 <h2 className={`${bebas.className} ${styles.cardTitle}`}>Polimento Técnico Premium</h2>
-                                <p className={`${lexend.className} ${styles.cardText}`}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma renovação mais profunda na pintura!
+                                <p className={`${lexend.className} ${styles.cardText}`}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma restauração mais profunda na pintura!
                                     Após o Tratamento, a pintura recebe uma proteção com durabilidade de até 12 meses. </p>
-                                <h5 className={styles.value}>Valor:</h5>
-                                <h2 className={styles.price}>
-                                    R$ <span>399,99 <span>á partir</span></span>
-                                </h2>
+
                                 <br></br>
-                                <Link className={styles.clickHere} href="../budgetSucessfull">Solicite um Orçamento <FaWhatsapp></FaWhatsapp></Link>
+                                <Link className={styles.clickHere} href="../budgetSucessfull"> Fale Grátis com o Técnico <FaWhatsapp></FaWhatsapp></Link>
 
                             </div>
 

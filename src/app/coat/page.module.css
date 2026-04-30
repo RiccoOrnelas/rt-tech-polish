@@ -234,99 +234,35 @@
     padding-right: 5px;
 }
 
-.textoInvestimento {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    color: red;
-}
-
-
-
-.pricesSection h2 {
-    background-color: #000;
-    padding: 0%;
-    margin-top: 15px;
-}
-
-.priceBox {
+.budget {
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1rem;
-    gap: 15px;
-    margin-top: 20px;
-    background-color: #33333323;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.priceBox h2 {
-    font-weight: 700;
-}
-
-
-
-.price {
-    margin-top: 0px;
-    padding-top: 0%;
-    color: rgb(55, 55, 55);
-    /* Vermelho */
-    font-weight: 600;
-    margin-left: 0.5rem;
-    font-size: 2.0rem;
+    justify-content: center;
 
 }
 
-.price span {
-    color: rgb(0, 0, 0);
-    text-shadow: none;
-    font-size: 4.0rem;
+.budget h1 {
+    margin-bottom: 15px;
 }
 
-.price span span {
-    font-size: 0.6rem;
-    color: #ffa500;
-    /* Vermelho */
-    font-weight: 600;
-    margin-left: 0.5rem;
+.clickHere {
 
-    /* Contorno para legibilidade */
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-}
-
-
-
-.formasPagamento {
-    margin-top: 0.5rem;
-}
-
-.botaoOrcamento {
-    background-color: #ffeb3b;
-    color: #000;
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
+    background-color: #34c510;
     font-weight: bold;
+    color: #0c0c0c;
+    border-radius: 15px;
+    padding: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    max-width: 400px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
 }
 
-.botaoOrcamento:hover {
-    background-color: #fdd835;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.clickHere:hover {
+    cursor: pointer;
+    background-color: #4add25;
+    color: #f5f5f5;
 }
 
 @media (max-width: 768px) {
@@ -506,41 +442,7 @@
         background-color: #e0e0e0;
     }
 
-    .pricesSection h2 {
-        width: 100%;
-    }
 
-    .priceBox {
-        margin-top: 10px;
-        padding-bottom: 8px;
-
-    }
-
-    .offer {
-        margin-bottom: 2px;
-    }
-
-    .price {
-        margin-top: 10px;
-        font-size: 1rem;
-    }
-
-    .priceBox h3 span {
-        font-size: 2rem;
-        font-weight: 800;
-    }
-
-    .priceBox h3 span span {
-        font-size: 1rem;
-
-    }
-
-    .textoInvestimento {
-        margin-top: 0px;
-        font-size: 0.8rem;
-        text-align: center;
-
-    }
 
 
 }
