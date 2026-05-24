@@ -3,8 +3,10 @@
 .galeriaContainer {
     width: 100%;
     padding: 48px 16px;
-    background-color: #f7f7f7;
+    background-color: #5f5c5c10;
     border-radius: 5px;
+    min-width: 80dvw;
+    max-width: 80dvw;
 }
 
 .galeriaWrapper {
@@ -19,7 +21,7 @@
 }
 
 .tituloBackground {
-    background-color: #000000;
+    background-color: #0a0a0a;
     padding: 8px 24px;
 }
 

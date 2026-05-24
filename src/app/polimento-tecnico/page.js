@@ -153,7 +153,7 @@ export default function PolimentoTecnico() {
             </div>
 
             <section className={styles.carBenefits}>
-                <h2 className={`${bebas.className} ${styles.sectionTitle}`}>Benefícios do Polimento Técnico</h2>
+                <h2 className={`${bebas.className} ${styles.sectionTitle}`}>Os 5 Benefícios de um Polimento Técnico</h2>
                 <div className={styles.benefitsContainer}>
                     <div className={styles.benefit}>
                         <h3>RESTAURAÇÃO</h3>
@@ -190,12 +190,15 @@ export default function PolimentoTecnico() {
             </section>
 
             <section className={styles.depoiments}>
+                <h1 className={`${bebas.className} ${styles.sectionTitle}`}>O que dizem sobre nós...</h1>
+
                 <Depoiments></Depoiments>
             </section >
             <section className={styles.types}>
+                <h1 className={`${bebas.className} ${styles.sectionTitle}`}>Temos o melhor pro seu carro!</h1>
                 <div className={styles.polishs}>
 
-                    <h1 className={`${bebas.className} ${styles.cardTitle}`}>Temos o melhor pro seu carro!</h1>
+
 
                     <div className={styles.priceContainer}>
                         <div className={styles.polimento}>
@@ -213,7 +216,7 @@ export default function PolimentoTecnico() {
                             </div>
                         </div>
                         <div className={styles.polimento}>
-                            <Image src='/assets/bmw.jpg' alt="Carro polido" width={300} height={400} layout="intrinsic" className={styles.imagecard} ></Image >
+                            <Image src='/assets/bmw.jpg' alt="Carro polido" width={300} height={400} className={styles.imagecard} />
                             <div className={styles.descriptions}>
                                 <h2 className={`${bebas.className} ${styles.cardTitle}`}>Polimento Técnico Premium</h2>
                                 <p className={`${lexend.className} ${styles.cardText}`}> Já aqui, o objetivo é zerar a pintura, removendo os riscos e marcas mais expressivas do carro, causando uma restauração mais profunda na pintura!

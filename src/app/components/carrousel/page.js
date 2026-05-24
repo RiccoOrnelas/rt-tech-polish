@@ -63,7 +63,6 @@ export default function ServicesCarousel() {
 
     return (
         <section className={styles.carouselSection}>
-            <h2 className={`${bebas.className} ${styles.carouselTitle} `} >Nossos Serviços</h2>
 
             <div className={styles.carouselWrapper}>
                 <button

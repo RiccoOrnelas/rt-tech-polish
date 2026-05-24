@@ -17,13 +17,13 @@ export default function Contacts() {
 
     return (
         <div className={styles.cont}>
-            <h2 className={styles.title}>Contatos</h2>
+
             <div className={styles.contatContainer}>
                 <div className={styles.contat}>
                     <div className={styles.allcontats}>
 
                         <div className={styles.Phone}>
-                            <h3>Telefone</h3>
+
                             <p>(11) 9 7891-5000 <FaWhatsapp size={22} /></p>
                         </div>
 
@@ -37,13 +37,15 @@ export default function Contacts() {
                             </Link>
                         </div>
 
-                        <Link href={"/budgetSucessfull"} target="_blank" className={styles.botaoOrcamento}>
-                            <FaWhatsapp className={styles.iconeWhatsapp} />
-                            Tirar Dúvidas?
-                        </Link>
-                        <h4 className={styles.subTitle}>Atendemos todo ABC e grande SP!</h4>
+
+
 
                     </div>
+                    <Link href={"/budgetSucessfull"} target="_blank" className={styles.botaoOrcamento}>
+                        <FaWhatsapp className={styles.iconeWhatsapp} />
+                        Tirar Dúvidas?
+                    </Link>
+                    <h4 className={styles.subTitle}>Atendemos todo ABC e grande SP!</h4>
 
                 </div>
 

@@ -2,7 +2,7 @@
 
     align-items: center;
     margin-bottom: 15px;
-    background-color: #000;
+    background-color: #0a0a0a;
 }
 
 .contatContainer {
@@ -14,7 +14,7 @@
     font-size: 15px;
     color: white;
     text-align: center;
-    background-color: #000;
+    background-color: #0a0a0a;
 }
 
 .title {
@@ -84,9 +84,10 @@
 
 .allcontats {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .Phone p {
