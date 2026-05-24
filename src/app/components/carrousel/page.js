@@ -39,6 +39,7 @@ export default function ServicesCarousel() {
 
     const [activeIndex, setActiveIndex] = useState(0);
     const ref = useRef(null);
+    const touchStartX = useRef(null);
 
     const scrollTo = (i) => {
         const c = ref.current;
@@ -52,6 +53,19 @@ export default function ServicesCarousel() {
         if (i < 0) i = 0;
         if (i >= slides.length) i = slides.length - 1;
         scrollTo(i);
+    };
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e) => {
+        if (touchStartX.current === null) return;
+        const diff = touchStartX.current - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+            handleArrow(diff > 0 ? 'right' : 'left');
+        }
+        touchStartX.current = null;
     };
 
     // atualiza posição ao redimensionar
@@ -70,7 +84,12 @@ export default function ServicesCarousel() {
                     className={styles.arrow}
                 >←</button>
 
-                <div className={styles.carousel} ref={ref}>
+                <div
+                    className={styles.carousel}
+                    ref={ref}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                >
                     {slides.map((s, idx) => (
                         <div
                             key={idx}
