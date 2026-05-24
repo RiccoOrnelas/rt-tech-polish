@@ -145,7 +145,7 @@ export default function PolimentoTecnico() {
 
     return (
 
-        <div className="container">
+        <div className={styles.container}>
 
             <div className={styles.topText}>
                 <span className={`${styles.marker} ${anton.className}`}>Polimento Técnico a Domícilio,
@@ -236,6 +236,7 @@ export default function PolimentoTecnico() {
 
             </section >
             <section className={styles.contats}>
+                <h1 className={`${bebas.className} ${styles.sectionTitle} `}>Contatos</h1>
                 <Contacts></Contacts>
             </section >
         </div >
