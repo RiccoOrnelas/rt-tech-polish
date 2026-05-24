@@ -231,10 +231,10 @@ export default function Vitrificacao() {
                         />
 
                         <Image
-                            src="/assets/Vx45.png"
-                            alt="Vx45"
-                            width={280}
-                            height={25}
+                            src="/assets/logo-dimension.png"
+                            alt="Dimension"
+                            width={50}
+                            height={30}
                         />
 
                         <Image

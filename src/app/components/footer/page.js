@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer className={styles.containerFooter}>
             <p className={styles.datasCompany}>
-                Copyright ©2016 - 2025 RT Polimento Técnico® - Todos os direitos reservados <br />
+                Copyright © 2018 - 2026 RT Polimento Técnico ® - Todos os direitos reservados <br />
                 Razão Social: Henrique Teixeira Ornelas - CNPJ: 26.423.409/0001-04 - <Link href="/privacity" className={styles.priv}>Privacidade</Link>
             </p>
         </footer>

@@ -187,33 +187,39 @@ export default function Home() {
 
 
             <section className={styles.services}>
+                <h1 className={`${bebas.className} ${styles.sectionTitle} `}>Conheça nossos serviços</h1>
                 <Carrousel></Carrousel>
             </section>
 
             <section className={styles.gallery}>
-                <h1 className={`${bebas.className} `}>Veja alguns resultados</h1>
+                <h1 className={`${bebas.className} ${styles.sectionTitle} `}>Veja alguns resultados</h1>
                 <Gallery imagens={galeryImages}></Gallery>
             </section>
 
             <section className={styles.suppliers}>
-                <h2 className={bebas.className}>Fornecedores</h2>
-                <div className={styles.supllyimages}>
-                    {supllyimages.map((image, index) => (
-                        <Supliers className={styles.supllyItens}
-                            key={index}
-                            imgUrl={image.imgUrl}
-                            alt={image.alt}
-                            width={image.width}
-                            height={`42px`}
-                        ></Supliers>
+                <h2 className={`${bebas.className} ${styles.sectionTitle} `}>Fornecedores</h2>
+                <div className={styles.sup}>
 
-                    ))}
+                    <div className={styles.supllyimages}>
+                        {supllyimages.map((image, index) => (
+                            <Supliers className={styles.supllyItens}
+                                key={index}
+                                imgUrl={image.imgUrl}
+                                alt={image.alt}
+                                width={image.width}
+                                height={`42px`}
+                            ></Supliers>
 
+                        ))}
+
+                    </div>
                 </div>
 
             </section >
 
             <section className={styles.contats}>
+                <h1 className={`${bebas.className} ${styles.sectionTitle} `}>Contatos</h1>
+
                 <Contacts></Contacts>
 
             </section >

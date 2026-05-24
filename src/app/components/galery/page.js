@@ -102,7 +102,6 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
                 className={styles.imagem}
                 width={500}
                 height={500}
-                layout="responsive"
               />
             </div>
           ))}
