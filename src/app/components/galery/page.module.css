@@ -52,6 +52,15 @@
     cursor: pointer;
 }
 
+.modalContent {
+    touch-action: pan-y;
+}
+
+.imagemModal {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
 .imageCard:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }

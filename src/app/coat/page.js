@@ -28,6 +28,55 @@ export default function Vitrificacao() {
 
     const gallerycoateds = [
         {
+            url: "/assets/Jaeco_0.jpg",
+            alt: "Jaeco Vitrificado",
+        }, {
+            url: "/assets/Jaeco_1.jpg",
+            alt: "Jaeco Vitrificado",
+        }, {
+            url: "/assets/Jaeco_2.jpg",
+            alt: "Jaeco Vitrificado",
+        }, {
+            url: "/assets/Jaeco_3.jpg",
+            alt: "Jaeco Vitrificado",
+        },
+        {
+            url: "/assets/bentley_0.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_1.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_2.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_3.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_4.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_5.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_6.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_7.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_8.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
             url: "/assets/vtaudi.jpg",
             alt: "Audi A3 Vitrificada",
         },

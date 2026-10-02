@@ -96,7 +96,7 @@ export default function ServicesCarousel() {
                             className={`${styles.slide} ${idx === activeIndex ? styles.slideActive : ''}`}
                         >
                             <div className={styles.slideText}>
-                                <h3>{s.title}</h3>
+                                <h3 className={styles.slideTitle}>{s.title}</h3>
                                 <p>{s.text}</p>
                             </div>
                             <img src={s.img} alt={s.title} className={styles.slideImg} />
