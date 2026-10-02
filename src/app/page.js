@@ -40,6 +40,69 @@ export default function Home() {
             alt: "T-cros Com bancos Higienizados e Hidratação Completa",
         },
         {
+            url: "/assets/Jaeco_0.jpg",
+            alt: "Jaeco Vitrificado",
+        }, {
+            url: "/assets/Jaeco_1.jpg",
+            alt: "Jaeco Vitrificado",
+        }, {
+            url: "/assets/Jaeco_2.jpg",
+            alt: "Jaeco Vitrificado",
+        }, {
+            url: "/assets/Jaeco_3.jpg",
+            alt: "Jaeco Vitrificado",
+        },
+        {
+            url: "/assets/bentley_0.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_1.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_2.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_3.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_4.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_5.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_6.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_7.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_8.jpg",
+            alt: "Bentley Vitrificado",
+
+        },
+        {
+            url: "/assets/mini2.jpg",
+            alt: "Mini cooper com Polimento Técnico Comercial",
+        },
+        {
+            url: "/assets/mini1.jpg",
+            alt: "Mini cooper com Polimento Técnico Comercial",
+        },
+        {
+            url: "/assets/mini4.jpg",
+            alt: "Mini cooper com Polimento Técnico Comercial",
+        },
+
+        {
             url: "/assets/gol1.png",
             alt: "Gol Polimento Técnico Premium",
         },
@@ -93,18 +156,6 @@ export default function Home() {
             url: "/assets/IMG_20210715_015050.jpg",
             alt: "Restauração de Farol",
         },
-        {
-            url: "/assets/mini2.jpg",
-            alt: "Mini cooper com Polimento Técnico Comercial",
-        },
-        {
-            url: "/assets/mini1.jpg",
-            alt: "Mini cooper com Polimento Técnico Comercial",
-        },
-        {
-            url: "/assets/mini4.jpg",
-            alt: "Mini cooper com Polimento Técnico Comercial",
-        }
 
 
     ]

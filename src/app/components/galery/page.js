@@ -12,11 +12,15 @@ const bebas = Bebas_Neue({
   font_size: "100px"
 })
 
+const SWIPE_THRESHOLD = 50; // px mínimos para considerar swipe
+
 export default function GaleriaDeResultadosComModal({ imagens }) {
   const [quantidadeExibida, setQuantidadeExibida] = useState(6);
   const [imagemSelecionada, setImagemSelecionada] = useState(null);
   const [indexAtual, setIndexAtual] = useState(0);
   const modalContentRef = useRef(null);
+  const touchStartX = useRef(null);
+  const touchStartY = useRef(null);
 
   const imagensExibidas = Array.isArray(imagens)
     ? imagens.slice(0, quantidadeExibida)
@@ -73,12 +77,37 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
     if (!modalContentRef.current) return;
 
     if (e.deltaY !== 0) {
-      e.preventDefault();
       if (e.deltaY > 0) {
         proximaImagem();
       } else {
         imagemAnterior();
       }
+    }
+  };
+
+  const handleTouchStart = (e) => {
+    const touch = e.touches[0];
+    touchStartX.current = touch.clientX;
+    touchStartY.current = touch.clientY;
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStartX.current === null) return;
+
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX.current;
+    const deltaY = touch.clientY - touchStartY.current;
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+
+    // Ignora gestos mais verticais que horizontais
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD || Math.abs(deltaX) < Math.abs(deltaY)) return;
+
+    if (deltaX < 0) {
+      proximaImagem();   // deslizou para a esquerda → próxima
+    } else {
+      imagemAnterior();  // deslizou para a direita → anterior
     }
   };
 
@@ -123,6 +152,8 @@ export default function GaleriaDeResultadosComModal({ imagens }) {
               onClick={(e) => e.stopPropagation()}
               ref={modalContentRef}
               onWheel={handleWheel}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
             >
               <button className={styles.botaoFechar} onClick={fecharModal}>
                 ✕

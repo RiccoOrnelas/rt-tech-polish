@@ -27,6 +27,43 @@ const lexend = Lexend({
 export default function PolimentoTecnico() {
     const galeryImages = [
         {
+            url: "/assets/bentley_0.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_1.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_2.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_3.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_4.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_5.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_6.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_7.jpg",
+            alt: "Bentley Vitrificado",
+        },
+        {
+            url: "/assets/bentley_8.jpg",
+            alt: "Bentley Vitrificado"
+        },
+
+        {
             url: "/assets/prisma.jpg",
             alt: "Polimento Técnico Premium - Prisma",
         },
